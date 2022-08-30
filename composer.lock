@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccbd816a07b206f971042295b899d1ba",
+    "content-hash": "2ff5b89ed23128e97c74b76d19fe33f9",
     "packages": [
         {
             "name": "brick/math",
@@ -898,6 +898,54 @@
             "time": "2022-08-28T14:45:39+00:00"
         },
         {
+            "name": "laravel-frontend-presets/argon",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel-frontend-presets/argon.git",
+                "reference": "3e2ef776d17ea1787c16c6af7594dbc95ce8f77b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel-frontend-presets/argon/zipball/3e2ef776d17ea1787c16c6af7594dbc95ce8f77b",
+                "reference": "3e2ef776d17ea1787c16c6af7594dbc95ce8f77b",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^9.0",
+                "laravel/legacy-factories": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LaravelFrontendPresets\\ArgonPreset\\ArgonPresetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LaravelFrontendPresets\\ArgonPreset\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel 9.x Front-end preset for argon",
+            "homepage": "https://github.com/creativetimofficial/argon-dashboard-laravel",
+            "keywords": [
+                "Argon",
+                "laravel",
+                "preset"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel-frontend-presets/argon/issues",
+                "source": "https://github.com/laravel-frontend-presets/argon/tree/v1.1.2"
+            },
+            "time": "2022-03-25T08:19:34+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v9.27.0",
             "source": {
@@ -1076,6 +1124,62 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2022-08-30T13:34:43+00:00"
+        },
+        {
+            "name": "laravel/legacy-factories",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/legacy-factories.git",
+                "reference": "5edc7e7eb76e7b4b29221f32139bcbf806c8870f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/legacy-factories/zipball/5edc7e7eb76e7b4b29221f32139bcbf806c8870f",
+                "reference": "5edc7e7eb76e7b4b29221f32139bcbf806c8870f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/macroable": "^8.0|^9.0",
+                "php": "^7.3|^8.0",
+                "symfony/finder": "^3.4|^4.0|^5.0|^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Illuminate\\Database\\Eloquent\\LegacyFactoryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "helpers.php"
+                ],
+                "psr-4": {
+                    "Illuminate\\Database\\Eloquent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The legacy version of the Laravel Eloquent factories.",
+            "homepage": "http://laravel.com",
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2022-01-13T08:45:08+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -1269,6 +1373,67 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.7.2"
             },
             "time": "2022-03-23T12:38:24+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "e6291e8083cb5255511eacd6da0ec078210beabd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/e6291e8083cb5255511eacd6da0ec078210beabd",
+                "reference": "e6291e8083cb5255511eacd6da0ec078210beabd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^9.21",
+                "illuminate/filesystem": "^9.21",
+                "illuminate/support": "^9.21",
+                "illuminate/validation": "^9.21",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/ui/tree/v4.0.0"
+            },
+            "time": "2022-07-25T10:21:27+00:00"
         },
         {
             "name": "league/commonmark",
@@ -5447,6 +5612,71 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
+            "name": "ibex/crud-generator",
+            "version": "v1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/awais-vteams/laravel-crud-generator.git",
+                "reference": "5736a2c53c5534cceb03d97ce9613aacb97c810c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/awais-vteams/laravel-crud-generator/zipball/5736a2c53c5534cceb03d97ce9613aacb97c810c",
+                "reference": "5736a2c53c5534cceb03d97ce9613aacb97c810c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5|^6.20.42|^7.0|^8.0|^9.0",
+                "laravelcollective/html": "^5.4|^6.0|^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ibex\\CrudGenerator\\CrudServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Ibex\\CrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "M Awais",
+                    "email": "asargodha@gmail.com"
+                }
+            ],
+            "description": "Laravel Crud Generator",
+            "keywords": [
+                "crud",
+                "crud generator",
+                "laravel",
+                "laravel crud generator",
+                "laravel package"
+            ],
+            "support": {
+                "issues": "https://github.com/awais-vteams/laravel-crud-generator/issues",
+                "source": "https://github.com/awais-vteams/laravel-crud-generator/tree/v1.3.3"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/awais-vteams",
+                    "type": "github"
+                },
+                {
+                    "url": "https://ko-fi.com/mawais",
+                    "type": "ko_fi"
+                }
+            ],
+            "time": "2022-03-08T14:13:11+00:00"
+        },
+        {
             "name": "laravel/pint",
             "version": "v1.1.2",
             "source": {
@@ -5571,6 +5801,78 @@
                 "source": "https://github.com/laravel/sail"
             },
             "time": "2022-08-17T13:17:15+00:00"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "reference": "78c3cb516ac9e6d3d76cad9191f81d217302dea6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/routing": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/session": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^6.0|^7.0|^8.0|^9.0",
+                "php": ">=7.2.5"
+            },
+            "require-dev": {
+                "illuminate/database": "^6.0|^7.0|^8.0|^9.0",
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": "~8.5|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Collective\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Form": "Collective\\Html\\FormFacade",
+                        "Html": "Collective\\Html\\HtmlFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                },
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "https://laravelcollective.com",
+            "support": {
+                "issues": "https://github.com/LaravelCollective/html/issues",
+                "source": "https://github.com/LaravelCollective/html"
+            },
+            "time": "2022-02-08T21:02:54+00:00"
         },
         {
             "name": "mockery/mockery",
