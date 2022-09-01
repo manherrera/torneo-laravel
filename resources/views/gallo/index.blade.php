@@ -32,12 +32,12 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
 
                                 <span id="card_title">
-                                    {{ __('Gallo') }}
+                                    {{ __('Registros') }}
                                 </span>
 
                                 <div class="float-right">
                                     <a href="{{ route('gallos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Create New') }}
+                                    {{ __('Crear Nuevo') }}
                                     </a>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                             <th>Peso</th>
                                             <th>Anillo</th>
 
-                                            <th></th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>

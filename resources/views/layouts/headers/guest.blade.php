@@ -3,7 +3,7 @@
         <div class="header-body text-center mb-7">
             <div class="row justify-content-center">
                 <div class="col-lg-5 col-md-6">
-                    <h1 class="text-white">{{ __('Welcome to Argon Dashboard FREE Laravel Live Preview.') }}</h1>
+                    <img src="{{ asset('argon') }}/img/brand/logo2.png" width="90%" height="100%">
                 </div>
             </div>
         </div>

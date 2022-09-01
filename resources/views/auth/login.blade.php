@@ -31,7 +31,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                     </div>
-                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" required>
+                                    <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Contraseña') }}" type="password" required>
                                 </div>
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" style="display: block;" role="alert">
@@ -46,7 +46,7 @@
                                 </label>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary my-4">{{ __('Sign in') }}</button>
+                                <button type="submit" class="btn btn-primary my-4">{{ __('Iniciar sesión') }}</button>
                             </div>
                         </form>
                     </div>
@@ -55,13 +55,13 @@
                     <div class="col-6">
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}" class="text-light">
-                                <small>{{ __('Forgot password?') }}</small>
+                                <small>{{ __('¿Olvidaste tu contraseña?') }}</small>
                             </a>
                         @endif
                     </div>
                     <div class="col-6 text-right">
                         <a href="{{ route('register') }}" class="text-light">
-                            <small>{{ __('Create new account') }}</small>
+                            <small>{{ __('Crear una nueva cuenta') }}</small>
                         </a>
                     </div>
                 </div>

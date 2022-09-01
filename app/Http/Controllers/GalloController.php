@@ -48,7 +48,7 @@ class GalloController extends Controller
         $gallo = Gallo::create($request->all());
 
         return redirect()->route('gallos.index')
-            ->with('success', 'Gallo created successfully.');
+            ->with('success', 'Registro creado con éxito');
     }
 
     /**
@@ -91,7 +91,7 @@ class GalloController extends Controller
         $gallo->update($request->all());
 
         return redirect()->route('gallos.index')
-            ->with('success', 'Gallo updated successfully');
+            ->with('success', 'Registro editado con éxito');
     }
 
     /**
@@ -104,6 +104,6 @@ class GalloController extends Controller
         $gallo = Gallo::find($id)->delete();
 
         return redirect()->route('gallos.index')
-            ->with('success', 'Gallo deleted successfully');
+            ->with('success', 'Registro eliminado con éxito');
     }
 }

@@ -30,10 +30,10 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="float-left">
-                                <span class="card-title">Show Gallo</span>
+                                <span class="card-title">Detalles</span>
                             </div>
                             <div class="float-right">
-                                <a class="btn btn-primary" href="{{ route('gallos.index') }}"> Back</a>
+                                <a class="btn btn-primary" href="{{ route('gallos.index') }}"> Atrás</a>
                             </div>
                         </div>
 
