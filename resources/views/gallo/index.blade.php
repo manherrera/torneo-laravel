@@ -75,11 +75,11 @@
 
                                                 <td>
                                                     <form action="{{ route('gallos.destroy',$gallo->id) }}" method="POST">
-                                                        <a class="btn btn-sm btn-primary " href="{{ route('gallos.show',$gallo->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                        <a class="btn btn-sm btn-success" href="{{ route('gallos.edit',$gallo->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                        <a class="btn btn-sm btn-primary " href="{{ route('gallos.show',$gallo->id) }}"><i class="fa fa-fw fa-eye"></i></a>
+                                                        <a class="btn btn-sm btn-success" href="{{ route('gallos.edit',$gallo->id) }}"><i class="fa fa-fw fa-edit"></i></a>
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
                                                     </form>
                                                 </td>
                                             </tr>
