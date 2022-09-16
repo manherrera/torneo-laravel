@@ -106,8 +106,18 @@
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('gallos.index') }}">
+                                <a class="nav-link" href="{{ route('partidos.index') }}">
+                                    {{ __('Partidos') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('equipos.index') }}">
                                     {{ __('Participantes') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('gallos.index') }}">
+                                    {{ __('Gallos') }}
                                 </a>
                             </li>
                             <li class="nav-item">
