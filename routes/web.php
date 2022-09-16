@@ -34,5 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
 	Route::resource('gallos', App\Http\Controllers\GalloController::class);
+	Route::resource('partidos', App\Http\Controllers\PartidoController::class);
+	Route::resource('equipos', App\Http\Controllers\EquipoController::class);
 });
 
