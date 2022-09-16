@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallo;
+use App\Models\Equipo;
+use App\Models\Partido;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +34,10 @@ class GalloController extends Controller
     public function create()
     {
         $gallo = new Gallo();
-        return view('gallo.create', compact('gallo'));
+        $equipo = Equipo::pluck('name','id');
+        $partido = Partido::pluck('name','id');
+
+        return view('gallo.create', compact('gallo', 'equipo', 'partido'));
     }
 
     /**
@@ -73,8 +78,10 @@ class GalloController extends Controller
     public function edit($id)
     {
         $gallo = Gallo::find($id);
+        $equipo = Equipo::pluck('name','id');
+        $partido = Partido::pluck('name','id');
 
-        return view('gallo.edit', compact('gallo'));
+        return view('gallo.edit', compact('gallo', 'equipo', 'partido'));
     }
 
     /**

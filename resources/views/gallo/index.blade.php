@@ -55,8 +55,8 @@
                                         <tr>
                                             <th>No</th>
                                             
+                                            <th>Equipo</th>
                                             <th>Partido</th>
-                                            <th>Personas</th>
                                             <th>Peso</th>
                                             <th>Anillo</th>
 
@@ -68,8 +68,8 @@
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 
-                                                <td>{{ $gallo->partido }}</td>
-                                                <td>{{ $gallo->personas }}</td>
+                                                <td>{{ $gallo->equipo->name }}</td>
+                                                <td>{{ $gallo->partido->name }}</td>
                                                 <td>{{ $gallo->peso }}</td>
                                                 <td>{{ $gallo->anillo }}</td>
 

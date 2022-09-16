@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('gallos', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->string('partido');
-            $table->integer('personas');
+            $table->bigInteger('equipo_id')->unsigned();
+            $table->bigInteger('partido_id')->unsigned();
             $table->float('peso');
             $table->integer('anillo');
             $table->timestamps();
+            $table->foreign('equipo_id')->references('id')->on('equipos')->onDelete('cascade');
+            $table->foreign('partido_id')->references('id')->on('partidos')->onDelete('cascade');
         });
     }
 

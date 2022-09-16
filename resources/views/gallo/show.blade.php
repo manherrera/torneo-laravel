@@ -36,16 +36,15 @@
                                 <a class="btn btn-primary" href="{{ route('gallos.index') }}"> Atrás</a>
                             </div>
                         </div>
-
                         <div class="card-body">
                             
                             <div class="form-group">
-                                <strong>Partido:</strong>
-                                {{ $gallo->partido }}
+                                <strong>Equipo:</strong>
+                                {{ $gallo->equipo->name }}
                             </div>
                             <div class="form-group">
-                                <strong>Personas:</strong>
-                                {{ $gallo->personas }}
+                                <strong>Partido:</strong>
+                                {{ $gallo->partido->name }}
                             </div>
                             <div class="form-group">
                                 <strong>Peso:</strong>
