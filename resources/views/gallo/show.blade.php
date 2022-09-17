@@ -44,7 +44,7 @@
                             </div>
                             <div class="form-group">
                                 <strong>Partido:</strong>
-                                {{ $gallo->partido->name }}
+                                {{ $gallo->partido }}
                             </div>
                             <div class="form-group">
                                 <strong>Peso:</strong>

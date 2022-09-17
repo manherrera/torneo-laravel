@@ -52,6 +52,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
+
                                         <th>Partido</th>
                                         <th>Peso</th>
                                         <th>Anillo</th>
@@ -64,7 +65,7 @@
                                         <tr>
 
                                             <td>{{ ++$i }}</td>
-                                            <td>{{ $gallos->partido_id }}</td>
+                                            <td>{{ $gallos->partido }}</td>
                                             <td>{{ $gallos->peso }}</td>
                                             <td>{{ $gallos->anillo }}</td>
 

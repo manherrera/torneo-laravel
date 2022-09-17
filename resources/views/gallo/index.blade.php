@@ -69,7 +69,7 @@
                                                 <td>{{ ++$i }}</td>
                                                 
                                                 <td>{{ $gallo->equipo->name }}</td>
-                                                <td>{{ $gallo->partido->name }}</td>
+                                                <td>{{ $gallo->partido }}</td>
                                                 <td>{{ $gallo->peso }}</td>
                                                 <td>{{ $gallo->anillo }}</td>
 

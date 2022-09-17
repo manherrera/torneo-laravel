@@ -1,7 +1,6 @@
 <?php
 namespace Database\Seeders;
 
-use App\Models\Partido;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
@@ -16,7 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UsersTableSeeder::class,
-            PartidoSeeder::class,
         ]);
     }
 }

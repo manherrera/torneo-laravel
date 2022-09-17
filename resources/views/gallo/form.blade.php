@@ -8,8 +8,8 @@
         </div>
         <div class="form-group">
             {{ Form::label('Partido') }}
-            {{ Form::select('partido_id', $partido, $gallo->partido_id, ['class' => 'form-control' . ($errors->has('partido_id') ? ' is-invalid' : ''), 'placeholder' => '--Partido--']) }}
-            {!! $errors->first('partido_id', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::text('partido', $gallo->partido, ['class' => 'form-control' . ($errors->has('partido') ? ' is-invalid' : ''), 'placeholder' => 'Partido']) }}
+            {!! $errors->first('partido', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Peso') }}

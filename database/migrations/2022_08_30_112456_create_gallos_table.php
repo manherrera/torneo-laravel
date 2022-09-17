@@ -17,12 +17,11 @@ return new class extends Migration
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
             $table->bigInteger('equipo_id')->unsigned();
-            $table->bigInteger('partido_id')->unsigned();
+            $table->string('partido');
             $table->float('peso');
             $table->integer('anillo');
             $table->timestamps();
             $table->foreign('equipo_id')->references('id')->on('equipos')->onDelete('cascade');
-            $table->foreign('partido_id')->references('id')->on('partidos')->onDelete('cascade');
         });
     }
 

@@ -55,9 +55,9 @@
                                         <tr>
                                             <th>No</th>
                                             
-                                            <th>Name</th>
+                                            <th>Nombre</th>
 
-                                            <th></th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
