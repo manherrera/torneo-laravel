@@ -39,7 +39,7 @@
                         <div class="card-body">
 
                             <div class="form-group">
-                                <strong>No de Equipo:</strong>
+                                <strong>No. de Equipo:</strong>
                                 {{ $equipo->id }}
                             </div>
 
@@ -56,6 +56,7 @@
                                         <th>Partido</th>
                                         <th>Peso</th>
                                         <th>Anillo</th>
+                                        <th>Estado</th>
 
                                     </tr>
                                 </thead>
@@ -68,6 +69,7 @@
                                             <td>{{ $gallos->partido }}</td>
                                             <td>{{ $gallos->peso }}</td>
                                             <td>{{ $gallos->anillo }}</td>
+                                            <td>{{ $gallos->estado }}</td>
 
                                         </tr>
                                     @endforeach

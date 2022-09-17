@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('partido');
             $table->float('peso');
             $table->integer('anillo');
+            $table->string('estado');
             $table->timestamps();
             $table->foreign('equipo_id')->references('id')->on('equipos')->onDelete('cascade');
         });

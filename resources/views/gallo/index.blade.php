@@ -59,6 +59,7 @@
                                             <th>Partido</th>
                                             <th>Peso</th>
                                             <th>Anillo</th>
+                                            <th>Estado</th>
 
                                             <th>Acciones</th>
                                         </tr>
@@ -72,6 +73,7 @@
                                                 <td>{{ $gallo->partido }}</td>
                                                 <td>{{ $gallo->peso }}</td>
                                                 <td>{{ $gallo->anillo }}</td>
+                                                <td>{{ $gallo->estado }}</td>
 
                                                 <td>
                                                     <form action="{{ route('gallos.destroy',$gallo->id) }}" method="POST">

@@ -21,7 +21,12 @@
             {{ Form::text('anillo', $gallo->anillo, ['class' => 'form-control' . ($errors->has('anillo') ? ' is-invalid' : ''), 'placeholder' => 'Anillo']) }}
             {!! $errors->first('anillo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
+        <div class="form-group">
+            {{ Form::label('Estado: ') }}
+            <br>
+            {{ Form::select('estado', array('activo'=>'Activo','inactivo'=>'Inactivo'), ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : ''),'placeholder' => 'Estado']) }}
+            {!! $errors->first('estado', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Guardar</button>
