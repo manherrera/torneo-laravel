@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipo;
+use App\Models\Gallo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 /**
  * Class EquipoController
@@ -61,7 +65,11 @@ class EquipoController extends Controller
     {
         $equipo = Equipo::find($id);
 
-        return view('equipo.show', compact('equipo'));
+        $gallos = DB::table( table: 'gallos')->where('equipo_id', '=', $id)-> get();
+
+        return view('equipo.show', compact('equipo','gallos'))
+        ->with('i', (request()->input('page', 1) - 1));
+
     }
 
     /**

@@ -33,15 +33,45 @@
                                 <span class="card-title">Detalles</span>
                             </div>
                             <div class="float-right">
-                                <a class="btn btn-primary" href="{{ route('gallos.index') }}"> Atrás</a>
+                                <a class="btn btn-primary" href="{{ route('equipos.index') }}"> Atrás</a>
                             </div>
                         </div>
                         <div class="card-body">
-                        
+
                             <div class="form-group">
-                                <strong>Nombre:</strong>
+                                <strong>No de Equipo:</strong>
+                                {{ $equipo->id }}
+                            </div>
+
+                            <div class="form-group">
+                                <strong>Equipo:</strong>
                                 {{ $equipo->name }}
                             </div>
+
+                            <table class="table table-striped table-hover">
+                                <thead class="thead">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Partido</th>
+                                        <th>Peso</th>
+                                        <th>Anillo</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($gallos as $gallos)
+                                    
+                                        <tr>
+
+                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $gallos->partido_id }}</td>
+                                            <td>{{ $gallos->peso }}</td>
+                                            <td>{{ $gallos->anillo }}</td>
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
 
                         </div>
                     </div>
