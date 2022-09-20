@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $partido_id
  * @property $peso
  * @property $anillo
+ * @property $puntos
  * @property $estado
  * @property $created_at
  * @property $updated_at
@@ -28,6 +29,7 @@ class Gallo extends Model
 		'partido' => 'required',
 		'peso' => 'required',
 		'anillo' => 'required',
+    'puntos' => 'required',
     'estado' => 'required',
     ];
 
@@ -38,7 +40,7 @@ class Gallo extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo_id','partido','peso','anillo','estado'];
+    protected $fillable = ['equipo_id','partido','peso','anillo','puntos','estado'];
 
 
     /**

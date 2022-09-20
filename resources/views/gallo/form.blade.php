@@ -22,6 +22,11 @@
             {!! $errors->first('anillo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('Puntos') }}
+            {{ Form::text('puntos', $gallo->puntos, ['class' => 'form-control' . ($errors->has('puntos') ? ' is-invalid' : ''), 'placeholder' => 'Puntos', 'Value' => '0']) }}
+            {!! $errors->first('puntos', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('Estado: ') }}
             <br>
             {{ Form::select('estado', array('activo'=>'Activo','inactivo'=>'Inactivo'), ['class' => 'form-control' . ($errors->has('estado') ? ' is-invalid' : ''),'placeholder' => 'Estado']) }}
