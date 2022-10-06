@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('gallos', function (Blueprint $table) {
+        Schema::create('peleasronda1', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->bigInteger('equipo_id')->unsigned();
-            $table->string('partido');
-            $table->float('peso');
-            $table->integer('anillo')->unique();
-            $table->integer('puntos');
-            $table->string('estado');
+            $table->integer('peleador1')->unique();
+            $table->integer('peleador2')->unique();
             $table->timestamps();
-            $table->foreign('equipo_id')->references('id')->on('equipos')->onDelete('cascade');
         });
     }
 
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gallos');
+        Schema::dropIfExists('peleasronda1');
     }
 };
