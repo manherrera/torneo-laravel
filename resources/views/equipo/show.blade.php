@@ -44,9 +44,14 @@
                             </div>
 
                             <div class="form-group">
-                                <strong>Equipo:</strong>
+                               <strong>Equipo:</strong>
                                 {{ $equipo->name }}
                             </div>
+
+                            <div class="form-group">
+                               <strong>Puntaje Total:</strong>
+                                {{ $equipo->puntaje }}
+                            </div> 
 
                             <table class="table table-striped table-hover">
                                 <thead class="thead">

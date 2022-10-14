@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use PDF;
 
 /**
  * Class EquipoController
@@ -22,10 +23,18 @@ class EquipoController extends Controller
      */
     public function index()
     {
-        $equipos = Equipo::paginate();
+        $equipos = Equipo::paginate(20);
 
         return view('equipo.index', compact('equipos'))
             ->with('i', (request()->input('page', 1) - 1) * $equipos->perPage());
+    }
+
+    public function pdf()
+    {
+        $equipos = Equipo::paginate(34);
+
+        $pdf = PDF::loadView('equipo.pdf',['equipos'=>$equipos]);
+        return $pdf->stream();
     }
 
     /**

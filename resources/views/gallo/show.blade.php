@@ -55,6 +55,10 @@
                                 {{ $gallo->anillo }}
                             </div>
                             <div class="form-group">
+                                <strong>Puntos:</strong>
+                                {{ $gallo->puntos }}
+                            </div>
+                            <div class="form-group">
                                 <strong>Estado:</strong>
                                 {{ $gallo->estado }}
                             </div>

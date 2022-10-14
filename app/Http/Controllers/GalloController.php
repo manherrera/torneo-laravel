@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallo;
 use App\Models\Equipo;
 use Illuminate\Http\Request;
+use PDF;
 
 /**
  * Class GalloController
@@ -19,10 +20,18 @@ class GalloController extends Controller
      */
     public function index()
     {
-        $gallos = Gallo::paginate();
+        $gallos = Gallo::paginate(30);
 
         return view('gallo.index', compact('gallos'))
             ->with('i', (request()->input('page', 1) - 1) * $gallos->perPage());
+    }
+
+    public function pdf()
+    {
+        $gallos = Gallo::paginate(128);
+
+        $pdf = PDF::loadView('gallo.pdf',['gallos'=>$gallos]);
+        return $pdf->stream();
     }
 
     /**

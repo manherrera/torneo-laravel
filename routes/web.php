@@ -25,6 +25,7 @@ Auth::routes();
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
+	//Navbar and Sidebar
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
@@ -33,8 +34,17 @@ Route::group(['middleware' => 'auth'], function () {
 	 Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
 	 Route::get('table-list', function () {return view('pages.tables');})->name('table');
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
-	Route::resource('gallos', App\Http\Controllers\GalloController::class);
-	Route::resource('partidos', App\Http\Controllers\PartidoController::class);
-	Route::resource('equipos', App\Http\Controllers\EquipoController::class);
 });
+
+	//Registro de partcipantes
+	Route::resource('gallos', App\Http\Controllers\GalloController::class)->middleware('auth');
+	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');
+	
+	//Genenarción de PDF
+	Route::get('equipo/pdf', 'App\Http\Controllers\EquipoController@pdf')->name('equipo.pdf');
+	Route::get('gallo/pdf', 'App\Http\Controllers\GalloController@pdf')->name('gallo.pdf');
+
+	//Rondas de peleas
+	Route::resource('ronda1peleas', App\Http\Controllers\Ronda1peleaController::class)->middleware('auth');
+
 

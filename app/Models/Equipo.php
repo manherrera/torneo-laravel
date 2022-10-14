@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $name
+ * @property $puntaje
  * @property $created_at
  * @property $updated_at
  *
@@ -21,6 +22,7 @@ class Equipo extends Model
     
     static $rules = [
 		'name' => 'required',
+    'puntaje' => 'required',
     ];
 
     protected $perPage = 20;
@@ -30,7 +32,7 @@ class Equipo extends Model
      *
      * @var array
      */
-    protected $fillable = ['name'];
+    protected $fillable = ['name','puntaje'];
 
 
     /**

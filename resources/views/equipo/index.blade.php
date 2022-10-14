@@ -36,6 +36,10 @@
                                 </span>
 
                                 <div class="float-right">
+                                    <a href="{{ route('equipo.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    {{ __('PDF') }}
+                                    </a>
+                                &nbsp;
                                     <a href="{{ route('equipos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                     {{ __('Crear Nuevo') }}
                                     </a>
@@ -57,6 +61,8 @@
                                             
                                             <th>Nombre</th>
 
+                                            <th>Puntaje</th>
+
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -66,6 +72,9 @@
                                                 <td>{{ ++$i }}</td>
                                                 
                                                 <td>{{ $equipo->name }}</td>
+
+                                                <td>{{ $equipo->puntaje }}</td>
+                                                
 
                                                 <td>
                                                     <form action="{{ route('equipos.destroy',$equipo->id) }}" method="POST">

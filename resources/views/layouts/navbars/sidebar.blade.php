@@ -128,18 +128,38 @@
                     <div class="collapse show" id="navbar-examples">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('equipos.index') }}">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
                                     {{ __('Primera Ronda') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('gallos.index') }}">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
                                     {{ __('Segunda Ronda') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('gallos.index') }}">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
                                     {{ __('Tercera Ronda') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                    {{ __('Cuarta Ronda') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                    {{ __('Quinta Ronda') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                    {{ __('Sexta Ronda') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                    {{ __('Septima Ronda') }}
                                 </a>
                             </li>
                         </ul>

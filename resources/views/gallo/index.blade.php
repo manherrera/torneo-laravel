@@ -36,6 +36,10 @@
                                 </span>
 
                                 <div class="float-right">
+                                    <a href="{{ route('gallo.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    {{ __('PDF') }}
+                                    </a>
+                                &nbsp;
                                     <a href="{{ route('gallos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                     {{ __('Crear Nuevo') }}
                                     </a>
