@@ -4,13 +4,144 @@
     @include('layouts.headers.cards')
     <div class="container-fluid mt--7">
         <div class="row">
+        <div class="row">
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Gallos</h5>
+                                <span class="h2 font-weight-bold mb-0">{{$gallo}}</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-muted text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <span class="text-nowrap">Total de Gallos registrados</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Equipos</h5>
+                                <span class="h2 font-weight-bold mb-0">{{$equipo}}</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-muted text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <span class="text-nowrap">Total de Gallos registrados</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Usuarios</h5>
+                                <span class="h2 font-weight-bold mb-0">{{$user}}</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                    <i class="ni ni-circle-08"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-muted text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <span class="text-nowrap">Total de Usuarios registrados</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+                <div class="card card-stats mb-4 mb-xl-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Peleas</h5>
+                                <span class="h2 font-weight-bold mb-0">{{$total}}</span>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                    <i class="ni ni-trophy"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-muted text-sm">
+                            <span class="text-success mr-2"><i class="fas fa-arrow-up"></i></span>
+                            <span class="text-nowrap">Total de Peleas disponibles</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-xl-8 mb-5 mb-xl-0">
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Podio de Gallos</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="{{ route('gallos.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <!-- Projects table -->
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead">
+                                <tr>
+                                    
+                                    <th>No Anillo</th>
+                                    <th>Peso</th>
+                                    <th>Puntos</th>
+                                    <th>Estado</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($gallos as $gallo)
+                                    <tr>
+                                        
+                                        <td>{{ $gallo->anillo }}</td>
+                                        <td>{{ $gallo->peso }}</td>
+                                        <td>{{ $gallo->puntos }}</td>
+                                        <td>{{ $gallo->estado }}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+
         <div class="row mt">
             <div class="col-xl-12 mb-5 mb-xl-0">
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Puntaje General</h3>
+                                <h3 class="mb-0">Podio Equipos</h3>
                             </div>
                         </div>
                     </div>
@@ -19,67 +150,25 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">Equipos</th>
-                                    <th scope="col">No. de Gallos</th>
-                                    <th scope="col">Puntos</th>
+                                    <th>No</th>
+                                    
+                                    <th>Nombre</th>
+
+                                    <th>Puntaje</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">
-                                        Hernandez
-                                    </th>
-                                    <td>
-                                        4
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 40
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Jimenez
-                                    </th>
-                                    <td>
-                                        5
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 80
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Mendoza
-                                    </th>
-                                    <td>
-                                        3
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 20
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Gutierrez
-                                    </th>
-                                    <td>
-                                        6
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 90
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        Estrada
-                                    </th>
-                                    <td>
-                                        5
-                                    </td>
-                                    <td>
-                                        <i class="fas fa-arrow-up text-success mr-3"></i> 0
-                                    </td>
-                                </tr>
+                                @foreach ($equipos as $equipo)
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        
+                                        <td>{{ $equipo->name }}</td>
+
+                                        <td><i class="fas fa-arrow-up text-success mr-3"></i>
+                                            {{ $equipo->puntaje }}
+                                        </td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

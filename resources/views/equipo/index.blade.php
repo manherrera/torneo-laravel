@@ -73,8 +73,9 @@
                                                 
                                                 <td>{{ $equipo->name }}</td>
 
-                                                <td>{{ $equipo->puntaje }}</td>
-                                                
+                                                <td><i class="fas fa-arrow-up text-success mr-3"></i>
+                                                    {{ $equipo->puntaje }}
+                                                </td>
 
                                                 <td>
                                                     <form action="{{ route('equipos.destroy',$equipo->id) }}" method="POST">

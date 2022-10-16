@@ -63,6 +63,7 @@
                                         <th>Anillo</th>
                                         <th>Puntos</th>
                                         <th>Estado</th>
+                                        <th>Acciones</th>
 
                                     </tr>
                                 </thead>
@@ -75,8 +76,19 @@
                                             <td>{{ $gallos->partido }}</td>
                                             <td>{{ $gallos->peso }}</td>
                                             <td>{{ $gallos->anillo }}</td>
-                                            <td>{{ $gallos->puntos }}</td>
+                                            <td><i class="fas fa-arrow-up text-success mr-3"></i>
+                                                {{ $gallos->puntos }}
+                                            </td>
                                             <td>{{ $gallos->estado }}</td>
+                                            <td>
+                                                <form action="{{ route('gallos.destroy',$gallos->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('gallos.show',$gallos->id) }}"><i class="fa fa-fw fa-eye"></i></a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('gallos.edit',$gallos->id) }}"><i class="fa fa-fw fa-edit"></i></a>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
+                                                </form>
+                                            </td>
 
                                         </tr>
                                     @endforeach
