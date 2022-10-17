@@ -42,7 +42,7 @@
                         </div>
                         <p class="mt-3 mb-0 text-muted text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <span class="text-nowrap">Total de Gallos registrados</span>
+                            <span class="text-nowrap">Total de Equipos registrados</span>
                         </p>
                     </div>
                 </div>

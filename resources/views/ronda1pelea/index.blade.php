@@ -36,8 +36,12 @@
                                 </span>
 
                                 <div class="float-right">
-                                    <a href="" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Generar Peleas') }}
+                                    <a href="{{ route('ronda1pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    {{ __('PDF') }}
+                                    </a>
+                                &nbsp;
+                                    <a href="{{ route('ronda1peleas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Crear Pelea') }}
                                     </a>
                                 </div>
                                 

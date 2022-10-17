@@ -88,11 +88,6 @@
                                     {{ __('Perfil de usuario') }}
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.index') }}">
-                                    {{ __('Gestión de usuarios') }}
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </li>

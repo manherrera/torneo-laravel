@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Ronda1pelea;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
+use PDF;
 
 /**
  * Class Ronda1peleaController
@@ -22,6 +26,14 @@ class Ronda1peleaController extends Controller
 
         return view('ronda1pelea.index', compact('ronda1peleas'))
             ->with('i', (request()->input('page', 1) - 1) * $ronda1peleas->perPage());
+    }
+
+    public function pdf()
+    {
+        $ronda1peleas = Ronda1pelea::paginate(64);
+
+        $pdf = PDF::loadView('ronda1pelea.pdf',['ronda1peleas'=>$ronda1peleas]);
+        return $pdf->stream();
     }
 
     /**
@@ -48,7 +60,7 @@ class Ronda1peleaController extends Controller
         $ronda1pelea = Ronda1pelea::create($request->all());
 
         return redirect()->route('ronda1peleas.index')
-            ->with('success', 'Ronda1pelea created successfully.');
+            ->with('success', 'Pelea creada con exito.');
     }
 
     /**
@@ -91,7 +103,7 @@ class Ronda1peleaController extends Controller
         $ronda1pelea->update($request->all());
 
         return redirect()->route('ronda1peleas.index')
-            ->with('success', 'Ronda1pelea updated successfully');
+            ->with('success', 'Pelea editada con exito');
     }
 
     /**
@@ -104,6 +116,6 @@ class Ronda1peleaController extends Controller
         $ronda1pelea = Ronda1pelea::find($id)->delete();
 
         return redirect()->route('ronda1peleas.index')
-            ->with('success', 'Ronda1pelea deleted successfully');
+            ->with('success', 'Pelea eliminada con exito');
     }
 }
