@@ -103,7 +103,7 @@ class Ronda3peleaController extends Controller
         $ronda3pelea->update($request->all());
 
         return redirect()->route('ronda3peleas.index')
-            ->with('success', 'elea editada con exito');
+            ->with('success', 'Pelea editada con exito');
     }
 
     /**
