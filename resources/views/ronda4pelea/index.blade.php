@@ -32,7 +32,7 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
 
                                 <span id="card_title">
-                                    {{ __('Cuarta Ronda (Cuartos de Final)') }}
+                                    {{ __('Cuarta Ronda') }}
                                 </span>
 
                                 <div class="float-right">

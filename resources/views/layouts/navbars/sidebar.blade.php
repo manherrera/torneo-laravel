@@ -148,7 +148,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                <a class="nav-link" href="{{ route('ronda6peleas.index') }}">
                                     {{ __('Sexta Ronda') }}
                                 </a>
                             </li>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2>Ronda 4 (Cuartos de Final)</h2>
+    <h2>Ronda 4</h2>
     <table class="table table-striped table-hover">
         <thead align="center" class="thead">
             <tr>
