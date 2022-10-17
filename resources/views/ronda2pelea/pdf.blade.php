@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2>Ronda 1</h2>
+    <h2>Ronda 2</h2>
     <table class="table table-striped table-hover">
         <thead align="center" class="thead">
             <tr>

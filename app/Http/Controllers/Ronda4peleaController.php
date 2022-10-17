@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Ronda3pelea;
+use App\Models\Ronda4pelea;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\File;
 use PDF;
 
 /**
- * Class Ronda3peleaController
+ * Class Ronda4peleaController
  * @package App\Http\Controllers
  */
-class Ronda3peleaController extends Controller
+class Ronda4peleaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,17 +22,17 @@ class Ronda3peleaController extends Controller
      */
     public function index()
     {
-        $ronda3peleas = Ronda3pelea::paginate();
+        $ronda4peleas = Ronda4pelea::paginate();
 
-        return view('ronda3pelea.index', compact('ronda3peleas'))
-            ->with('i', (request()->input('page', 1) - 1) * $ronda3peleas->perPage());
+        return view('ronda4pelea.index', compact('ronda4peleas'))
+            ->with('i', (request()->input('page', 1) - 1) * $ronda4peleas->perPage());
     }
 
     public function pdf()
     {
-        $ronda3peleas = Ronda3pelea::paginate(16);
+        $ronda4peleas = Ronda4pelea::paginate(8);
 
-        $pdf = PDF::loadView('ronda3pelea.pdf',['ronda3peleas'=>$ronda3peleas]);
+        $pdf = PDF::loadView('ronda4pelea.pdf',['ronda4peleas'=>$ronda4peleas]);
         return $pdf->stream();
     }
 
@@ -43,8 +43,8 @@ class Ronda3peleaController extends Controller
      */
     public function create()
     {
-        $ronda3pelea = new Ronda3pelea();
-        return view('ronda3pelea.create', compact('ronda3pelea'));
+        $ronda4pelea = new Ronda4pelea();
+        return view('ronda4pelea.create', compact('ronda4pelea'));
     }
 
     /**
@@ -55,11 +55,11 @@ class Ronda3peleaController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Ronda3pelea::$rules);
+        request()->validate(Ronda4pelea::$rules);
 
-        $ronda3pelea = Ronda3pelea::create($request->all());
+        $ronda4pelea = Ronda4pelea::create($request->all());
 
-        return redirect()->route('ronda3peleas.index')
+        return redirect()->route('ronda4peleas.index')
             ->with('success', 'Pelea creada con exito.');
     }
 
@@ -71,9 +71,9 @@ class Ronda3peleaController extends Controller
      */
     public function show($id)
     {
-        $ronda3pelea = Ronda3pelea::find($id);
+        $ronda4pelea = Ronda4pelea::find($id);
 
-        return view('ronda3pelea.show', compact('ronda3pelea'));
+        return view('ronda4pelea.show', compact('ronda4pelea'));
     }
 
     /**
@@ -84,26 +84,26 @@ class Ronda3peleaController extends Controller
      */
     public function edit($id)
     {
-        $ronda3pelea = Ronda3pelea::find($id);
+        $ronda4pelea = Ronda4pelea::find($id);
 
-        return view('ronda3pelea.edit', compact('ronda3pelea'));
+        return view('ronda4pelea.edit', compact('ronda4pelea'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Ronda3pelea $ronda3pelea
+     * @param  Ronda4pelea $ronda4pelea
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ronda3pelea $ronda3pelea)
+    public function update(Request $request, Ronda4pelea $ronda4pelea)
     {
-        request()->validate(Ronda3pelea::$rules);
+        request()->validate(Ronda4pelea::$rules);
 
-        $ronda3pelea->update($request->all());
+        $ronda4pelea->update($request->all());
 
-        return redirect()->route('ronda3peleas.index')
-            ->with('success', 'elea editada con exito');
+        return redirect()->route('ronda4peleas.index')
+            ->with('success', 'Pelea editada con exito');
     }
 
     /**
@@ -113,9 +113,9 @@ class Ronda3peleaController extends Controller
      */
     public function destroy($id)
     {
-        $ronda3pelea = Ronda3pelea::find($id)->delete();
+        $ronda4pelea = Ronda4pelea::find($id)->delete();
 
-        return redirect()->route('ronda3peleas.index')
+        return redirect()->route('ronda4peleas.index')
             ->with('success', 'Pelea eliminada con exito');
     }
 }
