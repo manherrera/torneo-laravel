@@ -43,9 +43,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('ronda2pelea/pdf', 'App\Http\Controllers\Ronda2peleaController@pdf')->name('ronda2pelea.pdf');
 	Route::get('ronda3pelea/pdf', 'App\Http\Controllers\Ronda3peleaController@pdf')->name('ronda3pelea.pdf');
 	Route::get('ronda4pelea/pdf', 'App\Http\Controllers\Ronda4peleaController@pdf')->name('ronda4pelea.pdf');
+	Route::get('ronda5pelea/pdf', 'App\Http\Controllers\Ronda5peleaController@pdf')->name('ronda5pelea.pdf');
 
 	//Rondas de peleas
 	Route::resource('ronda1peleas', App\Http\Controllers\Ronda1peleaController::class)->middleware('auth');
 	Route::resource('ronda2peleas', App\Http\Controllers\Ronda2peleaController::class)->middleware('auth');
 	Route::resource('ronda3peleas', App\Http\Controllers\Ronda3peleaController::class)->middleware('auth');
 	Route::resource('ronda4peleas', App\Http\Controllers\Ronda4peleaController::class)->middleware('auth');
+	Route::resource('ronda5peleas', App\Http\Controllers\Ronda5peleaController::class)->middleware('auth');

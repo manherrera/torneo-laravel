@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $ronda3pelea->name ?? 'Show Ronda3Pelea' }}
+    Update Ronda5Pelea
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Peleas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ronda 4</li>
+                        <li class="breadcrumb-item active" aria-current="page">Ronda 5</li>
                         </ol>
                     </nav>
                 </div>
@@ -25,29 +25,23 @@
     </div>
     <br>
     <section class="content container-fluid">
-        <div class="row">
+        <div class="">
             <div class="col-md-12">
-                <div class="card">
+
+                @includeif('partials.errors')
+
+                <div class="card card-default">
                     <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Detalles de la Pelea</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('ronda3peleas.index') }}"> Atrás</a>
-                        </div>
+                        <span class="card-title">Modificar Pelea</span>
                     </div>
-
                     <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Peleador 1 (Anillo):</strong>
-                            {{ $ronda3pelea->peleador1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peleador 2 (Anillo):</strong>
-                            {{ $ronda3pelea->peleador2 }}
-                        </div>
+                        <form method="POST" action="{{ route('ronda5peleas.update', $ronda5pelea->id) }}"  role="form" enctype="multipart/form-data">
+                            {{ method_field('PATCH') }}
+                            @csrf
 
+                            @include('ronda5pelea.form')
+
+                        </form>
                     </div>
                 </div>
             </div>
