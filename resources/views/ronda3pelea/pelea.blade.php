@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $ronda2pelea->name ?? 'Show Ronda2Pelea' }}
+    Ronda3Pelea
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Peleas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ronda 2</li>
+                        <li class="breadcrumb-item active" aria-current="page">Ronda 3</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,24 +28,10 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Detalles de la Pelea</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('ronda2peleas.index') }}"> Atrás</a>
-                        </div>
-                    </div>
-
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Peleador 1 (Anillo):</strong>
-                            {{ $ronda2pelea->peleador1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peleador 2 (Anillo):</strong>
-                            {{ $ronda2pelea->peleador2 }}
+                            Registros generados con exito
                         </div>
 
                     </div>
