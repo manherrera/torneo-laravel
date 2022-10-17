@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Ronda3Pelea
+    Ronda7Pelea
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Peleas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Ronda 3</li>
+                        <li class="breadcrumb-item active" aria-current="page">Final</li>
                     </ol>
                     </nav>
                 </div>
@@ -32,15 +32,15 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
 
                                 <span id="card_title">
-                                    {{ __('Tercera Ronda') }}
+                                    {{ __('Septima Ronda (Final)') }}
                                 </span>
 
                                 <div class="float-right">
-                                    <a href="{{ route('ronda3pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <a href="{{ route('ronda7pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
                                     {{ __('PDF') }}
                                     </a>
                                 &nbsp;
-                                    <a href="{{ route('ronda3peleas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    <a href="{{ route('ronda7peleas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                     {{ __('Crear Pelea') }}
                                     </a>
                                 </div>
@@ -67,17 +67,17 @@
                                         </tr>
                                     </thead>
                                     <tbody align="center">
-                                        @foreach ($ronda3peleas as $ronda3pelea)
+                                        @foreach ($ronda7peleas as $ronda7pelea)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 
-                                                <td>{{ $ronda3pelea->peleador1 }}</td>
-                                                <td>{{ $ronda3pelea->peleador2 }}</td>
+                                                <td>{{ $ronda7pelea->peleador1 }}</td>
+                                                <td>{{ $ronda7pelea->peleador2 }}</td>
 
                                                 <td>
-                                                    <form action="{{ route('ronda3peleas.destroy',$ronda3pelea->id) }}" method="POST">
-                                                        <a class="btn btn-sm btn-primary " href="{{ route('ronda3peleas.show',$ronda3pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>
-                                                        <a class="btn btn-sm btn-success" href="{{ route('ronda3peleas.edit',$ronda3pelea->id) }}"><i class="fa fa-fw fa-edit"></i></a>
+                                                    <form action="{{ route('ronda7peleas.destroy',$ronda7pelea->id) }}" method="POST">
+                                                        <a class="btn btn-sm btn-primary " href="{{ route('ronda7peleas.show',$ronda7pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>
+                                                        <a class="btn btn-sm btn-success" href="{{ route('ronda7peleas.edit',$ronda7pelea->id) }}"><i class="fa fa-fw fa-edit"></i></a>
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    {!! $ronda3peleas->links() !!}
+                    {!! $ronda7peleas->links() !!}
                 </div>
             </div>
         </div>

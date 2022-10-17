@@ -63,7 +63,7 @@
                                             <th>Peleador 1</th>
                                             <th>Peleador 2</th>
 
-                                            <th></th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody align="center">

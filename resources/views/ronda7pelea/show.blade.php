@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Ronda6Pelea
+    {{ $ronda7pelea->name ?? 'Show Ronda7Pelea' }}
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                         <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                         <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Peleas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Semifinales</li>
+                        <li class="breadcrumb-item active" aria-current="page">Final</li>
                         </ol>
                     </nav>
                 </div>
@@ -28,10 +28,24 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
+                    <div class="card-header">
+                        <div class="float-left">
+                            <span class="card-title">Detalles de la Pelea</span>
+                        </div>
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="{{ route('ronda7peleas.index') }}"> Atrás</a>
+                        </div>
+                    </div>
+
                     <div class="card-body">
                         
                         <div class="form-group">
-                            Registros generados con exito
+                            <strong>Peleador 1 (Anillo):</strong>
+                            {{ $ronda7pelea->peleador1 }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Peleador 2 (Anillo):</strong>
+                            {{ $ronda7pelea->peleador2 }}
                         </div>
 
                     </div>
