@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('gallos', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->bigIncrements('id');
+            $table->bigInteger('id')->unsigned();
+            $table->primary('id');
             $table->bigInteger('equipo_id')->unsigned();
             $table->string('partido');
             $table->float('peso');
-            $table->integer('anillo')->unique();
             $table->integer('puntos');
             $table->string('estado');
             $table->timestamps();

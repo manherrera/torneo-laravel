@@ -121,7 +121,7 @@
                                 @foreach ($gallos as $gallo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->anillo }}</td>
+                                        <td>{{ $gallo->id }}</td>
                                         <td>{{ $gallo->peso }}</td>
                                         <td>{{ $gallo->puntos }}</td>
                                         <td>{{ $gallo->estado }}</td>

@@ -16,9 +16,11 @@ return new class extends Migration
         Schema::create('ronda1peleas', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->integer('peleador1')->unique();
-            $table->integer('peleador2')->unique();
+            $table->bigInteger('peleador1')->unsigned();
+            $table->bigInteger('peleador2')->unsigned();
             $table->timestamps();
+            $table->foreign('peleador1')->references('id')->on('gallos')->onDelete('cascade');
+            $table->foreign('peleador2')->references('id')->on('gallos')->onDelete('cascade');
         });
     }
 

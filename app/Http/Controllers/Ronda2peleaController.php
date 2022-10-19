@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ronda2pelea;
+use App\Models\Gallo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -44,7 +45,9 @@ class Ronda2peleaController extends Controller
     public function create()
     {
         $ronda2pelea = new Ronda2pelea();
-        return view('ronda2pelea.create', compact('ronda2pelea'));
+        $gallo = Gallo::pluck('id');
+
+        return view('ronda2pelea.create', compact('ronda2pelea', 'gallo'));
     }
 
     /**
@@ -85,8 +88,9 @@ class Ronda2peleaController extends Controller
     public function edit($id)
     {
         $ronda2pelea = Ronda2pelea::find($id);
+        $gallo = Gallo::pluck('id');
 
-        return view('ronda2pelea.edit', compact('ronda2pelea'));
+        return view('ronda2pelea.edit', compact('ronda2pelea','gallo'));
     }
 
     /**

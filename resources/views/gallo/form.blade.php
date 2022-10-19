@@ -2,6 +2,10 @@
     <div class="box-body">
         
         <div class="form-group">
+            {{ Form::label('Anillo') }}
+            {{ Form::text('id', $gallo->id, ['class' => 'form-control' . ($errors->has('id') ? ' is-invalid' : ''), 'placeholder' => 'Anillo']) }}
+        </div>
+        <div class="form-group">
             {{ Form::label('Equipo') }}
             {{ Form::select('equipo_id', $equipo, $gallo->equipo_id, ['class' => 'form-control' . ($errors->has('equipo_id') ? ' is-invalid' : ''), 'placeholder' => '--Equipo--']) }}
             {!! $errors->first('equipo_id', '<div class="invalid-feedback">:message</div>') !!}
@@ -15,11 +19,6 @@
             {{ Form::label('Peso') }}
             {{ Form::text('peso', $gallo->peso, ['class' => 'form-control' . ($errors->has('peso') ? ' is-invalid' : ''), 'placeholder' => 'Peso']) }}
             {!! $errors->first('peso', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('Anillo') }}
-            {{ Form::text('anillo', $gallo->anillo, ['class' => 'form-control' . ($errors->has('anillo') ? ' is-invalid' : ''), 'placeholder' => 'Anillo']) }}
-            {!! $errors->first('anillo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Puntos') }}

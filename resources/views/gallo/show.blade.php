@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <strong>Anillo:</strong>
-                                {{ $gallo->anillo }}
+                                {{ $gallo->id }}
                             </div>
                             <div class="form-group">
                                 <strong>Puntos:</strong>

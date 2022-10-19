@@ -75,7 +75,7 @@
                                             <td>{{ ++$i }}</td>
                                             <td>{{ $gallos->partido }}</td>
                                             <td>{{ $gallos->peso }}</td>
-                                            <td>{{ $gallos->anillo }}</td>
+                                            <td>{{ $gallos->id }}</td>
                                             <td><i class="fas fa-arrow-up text-success mr-3"></i>
                                                 {{ $gallos->puntos }}
                                             </td>

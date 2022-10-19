@@ -17,7 +17,6 @@
                 <th>Peleador 1</th>
                 <th>Peleador 2</th>
 
-                <th></th>
             </tr>
         </thead>
         <tbody align="center">
@@ -27,15 +26,6 @@
                     <td>{{ $ronda6pelea->peleador1 }}</td>
                     <td>{{ $ronda6pelea->peleador2 }}</td>
 
-                    <td>
-                        <form action="{{ route('ronda6peleas.destroy',$ronda6pelea->id) }}" method="POST">
-                            <a class="btn btn-sm btn-primary " href="{{ route('ronda6peleas.show',$ronda6pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>
-                            <a class="btn btn-sm btn-success" href="{{ route('ronda6peleas.edit',$ronda6pelea->id) }}"><i class="fa fa-fw fa-edit"></i></a>
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
-                        </form>
-                    </td>
                 </tr>
             @endforeach
         </tbody>

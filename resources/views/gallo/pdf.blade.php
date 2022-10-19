@@ -28,7 +28,7 @@
                     <td>{{ $gallo->equipo->name }}</td>
                     <td>{{ $gallo->partido }}</td>
                     <td>{{ $gallo->peso }}</td>
-                    <td>{{ $gallo->anillo }}</td>
+                    <td>{{ $gallo->id }}</td>
                     <td>{{ $gallo->puntos }}</td>
                     <td>{{ $gallo->estado }}</td>
 
