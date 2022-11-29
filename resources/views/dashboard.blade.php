@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Gallos</h5>
-                                <span class="h2 font-weight-bold mb-0">{{$gallo}}</span>
+                                <span class="h2 font-weight-bold mb-0">4</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -84,7 +84,7 @@
                         </div>
                         <p class="mt-3 mb-0 text-muted text-sm">
                             <span class="text-success mr-2"><i class="fas fa-arrow-up"></i></span>
-                            <span class="text-nowrap">Total de Peleas disponibles</span>
+                            <span class="text-nowrap">Total de Peleas a disputar</span>
                         </p>
                     </div>
                 </div>
@@ -162,10 +162,10 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         
-                                        <td>{{ $participante->name }}</td>
+                                        <td>{{ $participante->equipo }}</td>
 
                                         <td><i class="fas fa-arrow-up text-success mr-3"></i>
-                                            {{ $participante->puntaje }}
+                                            {{ $participante->puntaje_total }}
                                         </td>
                                     </tr>
                                 @endforeach

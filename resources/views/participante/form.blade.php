@@ -19,9 +19,9 @@
         <div class="form-group">
             {{ Form::label('estado de gallo 1') }}
             <br>
-            <input type="radio" id="activo" name="estado2" value="activo">
+            <input type="radio" id="activo" name="estado1" value="activo">
             <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado2" value="inactivo">
+            <input type="radio" id="inactivo" name="estado1" value="inactivo">
             <label for="activo">Inactivo</label><br>
         </div>
         <div class="form-group">
@@ -65,9 +65,9 @@
         <div class="form-group">
             {{ Form::label('estado de gallo 3') }}
             <br>
-            <input type="radio" id="activo" name="estado2" value="activo">
+            <input type="radio" id="activo" name="estado3" value="activo">
             <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado2" value="inactivo">
+            <input type="radio" id="inactivo" name="estado3" value="inactivo">
             <label for="activo">Inactivo</label><br>
         </div>
         <div class="form-group">
@@ -88,9 +88,9 @@
         <div class="form-group">
             {{ Form::label('estado de gallo 4') }}
             <br>
-            <input type="radio" id="activo" name="estado2" value="activo">
+            <input type="radio" id="activo" name="estado4" value="activo">
             <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado2" value="inactivo">
+            <input type="radio" id="inactivo" name="estado4" value="inactivo">
             <label for="activo">Inactivo</label><br>
         </div>
         <div class="form-group">
