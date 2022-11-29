@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ronda7peleas', function (Blueprint $table) {
+        Schema::create('ronda5peleas', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->integer('peleador1')->unique();
-            $table->integer('peleador2')->unique();
+            $table->integer('peleador1')->unique()->nullable();
+            $table->integer('peleador2')->unique()->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ronda7peleas');
+        Schema::dropIfExists('ronda5peleas');
     }
 };

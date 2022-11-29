@@ -1,8 +1,6 @@
 <?php
 namespace Database\Seeders;
 
-use App\Models\Equipo;
-use App\Models\Gallo;
 use App\Models\Ronda1pelea;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
@@ -18,8 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             UsersTableSeeder::class,
-            EquipoSeeder::class,
-            GalloSeeder::class,
             //Ronda1peleaSeeder::class,
         ]);
     }

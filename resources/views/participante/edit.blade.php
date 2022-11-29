@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Generar Pelea
+    Update Participante
 @endsection
 
 @section('content')
@@ -11,34 +11,35 @@
             <div class="header-body">
             <div class="row align-items-center py-4">
                 <div class="col-lg-6 col-7">
-                    <h6 class="h2 text-white d-inline-block mb-0">Peleas</h6>
-                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                <h6 class="h2 text-white d-inline-block mb-0">Gallos</h6>
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                        <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Peleas</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Final</li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('participantes.index') }}">Gallos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Participantes</li>
                     </ol>
-                    </nav>
+                </nav>
                 </div>
             </div>
             </div>
         </div>
         <br>
         <section class="content container-fluid">
-            <div class="row">
+            <div class="">
                 <div class="col-md-12">
 
                     @includeif('partials.errors')
 
                     <div class="card card-default">
                         <div class="card-header">
-                            <span class="card-title">Generar Peleas</span>
+                            <span class="card-title">Modificar Participante</span>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('ronda7peleas.store') }}"  role="form" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('participantes.update', $participante->id) }}"  role="form" enctype="multipart/form-data">
+                                {{ method_field('PATCH') }}
                                 @csrf
 
-                                @include('ronda7pelea.form')
+                                @include('participante.form')
 
                             </form>
                         </div>

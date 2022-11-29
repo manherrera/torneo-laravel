@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Participantes
+    Participante
 @endsection
 
 @section('content')
@@ -14,8 +14,8 @@
               <h6 class="h2 text-white d-inline-block mb-0">Gallos</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Gallos</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('participantes.index') }}">Gallos</a></li>
                   <li class="breadcrumb-item active" aria-current="page">Participantes</li>
                 </ol>
               </nav>
@@ -32,15 +32,15 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
 
                                 <span id="card_title">
-                                    {{ __('Equipos') }}
+                                    {{ __('Registros') }}
                                 </span>
 
                                 <div class="float-right">
-                                    <a href="{{ route('equipo.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <a href="{{ route('participante.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
                                     {{ __('PDF') }}
                                     </a>
                                 &nbsp;
-                                    <a href="{{ route('equipos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    <a href="{{ route('participantes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                     {{ __('Crear Nuevo') }}
                                     </a>
                                 </div>
@@ -59,32 +59,48 @@
                                         <tr>
                                             <th>No</th>
                                             
-                                            <th>Nombre</th>
+                                            <th>Equipo</th>
 
-                                            <th>Puntaje</th>
+                                            <th>Gallo 1</th>
+                                            <th>Peso </th>
+
+                                            <th>Gallo 2</th>
+                                            <th>Peso</th>
+
+                                            <th>Gallo 3</th>
+                                            <th>Peso</th>
+
+                                            <th>Gallo 4</th>
+                                            <th>Peso</th>
 
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($equipos as $equipo)
+                                        @foreach ($participantes as $participante)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 
-                                                <td>{{ $equipo->name }}</td>
+                                                <td>{{ $participante->equipo }}</td>
+                                                <td>{{ $participante->gallo1_anillo }}</td>
+                                                <td>{{ $participante->peso1 }}</td>
 
-                                                <td><i class="fas fa-arrow-up text-success mr-3"></i>
-                                                    {{ $equipo->puntaje }}
-                                                </td>
+                                                <td>{{ $participante->gallo2_anillo }}</td>
+                                                <td>{{ $participante->peso2 }}</td>
+
+                                                <td>{{ $participante->gallo3_anillo }}</td>
+                                                <td>{{ $participante->peso3 }}</td>
+
+                                                <td>{{ $participante->gallo4_anillo }}</td>
+                                                <td>{{ $participante->peso4 }}</td>
 
                                                 <td>
-                                                    <form action="{{ route('equipos.destroy',$equipo->id) }}" method="POST">
-                                                        <a class="btn btn-sm btn-primary " href="{{ route('equipos.show',$equipo->id) }}"><i class="fa fa-fw fa-eye"></i></a>
-                                                        <a class="btn btn-sm btn-success" href="{{ route('equipos.edit',$equipo->id) }}"><i class="fa fa-fw fa-edit"></i></a>
+                                                    <form action="{{ route('participantes.destroy',$participante->id) }}" method="POST">
+                                                        <a class="btn btn-sm btn-primary " href="{{ route('participantes.show',$participante->id) }}"><i class="fa fa-fw fa-eye"></i></a>
+                                                        <a class="btn btn-sm btn-success" href="{{ route('participantes.edit',$participante->id) }}"><i class="fa fa-fw fa-edit"></i></a>
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></button>
-                                                        <a class="btn btn-sm btn-primary " href="{{ route('gallos.create') }}"> + Gallo</a>
                                                     </form>
                                                 </td>
                                             </tr>
@@ -94,7 +110,7 @@
                             </div>
                         </div>
                     </div>
-                    {!! $equipos->links() !!}
+                    {!! $participantes->links() !!}
                 </div>
             </div>
         </div>

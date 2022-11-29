@@ -32,7 +32,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Equipos</h5>
-                                <span class="h2 font-weight-bold mb-0">{{$equipo}}</span>
+                                <span class="h2 font-weight-bold mb-0">{{$participante}}</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -100,7 +100,7 @@
                                 <h3 class="mb-0">Podio de Gallos</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('gallos.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>
@@ -121,10 +121,10 @@
                                 @foreach ($gallos as $gallo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->id }}</td>
-                                        <td>{{ $gallo->peso }}</td>
-                                        <td>{{ $gallo->puntos }}</td>
-                                        <td>{{ $gallo->estado }}</td>
+                                        <td>{{ $gallo->gallo1_anillo }}</td>
+                                        <td>{{ $gallo->peso1 }}</td>
+                                        <td>{{ $gallo->puntos1 }}</td>
+                                        <td>{{ $gallo->estado1 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -158,14 +158,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($equipos as $equipo)
+                                @foreach ($participantes as $participante)
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         
-                                        <td>{{ $equipo->name }}</td>
+                                        <td>{{ $participante->name }}</td>
 
                                         <td><i class="fas fa-arrow-up text-success mr-3"></i>
-                                            {{ $equipo->puntaje }}
+                                            {{ $participante->puntaje }}
                                         </td>
                                     </tr>
                                 @endforeach

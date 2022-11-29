@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Equipo;
-use App\Models\Gallo;
+use App\Models\Participante;
 use App\Models\Ronda1pelea;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -32,19 +31,19 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::count();
-        $equipo = Equipo::count();
-        $gallo = Gallo::count();
+        $participante = Participante::count();
+        $gallo = Ronda1pelea::count();
         $total = Ronda1pelea::count()+Ronda1pelea::count()+Ronda1pelea::count()
                 +Ronda1pelea::count()+Ronda1pelea::count()+Ronda1pelea::count()
                 +Ronda1pelea::count();
 
-        $equipos = DB::select('SELECT * FROM equipos ORDER BY ABS(puntaje) DESC LIMIT 10');
-        $gallos = DB::select('SELECT * FROM gallos ORDER BY ABS(puntos) DESC LIMIT 15');
+        $participantes = DB::select('SELECT * FROM participantes ORDER BY ABS(puntaje_total) DESC LIMIT 10');
+        $gallos = DB::select('SELECT * FROM participantes ORDER BY ABS(puntos1) DESC LIMIT 15');
 
 
-        return view('dashboard', compact('equipos', 'gallos'), [
+        return view('dashboard', compact('participantes', 'gallos'), [
             'user' => $user,
-            'equipo' => $equipo,
+            'participante' => $participante,
             'gallo' => $gallo,
             'total' => $total
 

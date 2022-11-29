@@ -33,19 +33,15 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 	//Registro de partcipantes
-	Route::resource('gallos', App\Http\Controllers\GalloController::class)->middleware('auth');
-	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');
+	Route::resource('participantes', App\Http\Controllers\ParticipanteController::class)->middleware('auth');
 	
 	//Genenarción de PDF
-	Route::get('equipo/pdf', 'App\Http\Controllers\EquipoController@pdf')->name('equipo.pdf');
-	Route::get('gallo/pdf', 'App\Http\Controllers\GalloController@pdf')->name('gallo.pdf');
+	Route::get('participante/pdf', 'App\Http\Controllers\ParticipanteController@pdf')->name('participante.pdf');
 	Route::get('ronda1pelea/pdf', 'App\Http\Controllers\Ronda1peleaController@pdf')->name('ronda1pelea.pdf');
 	Route::get('ronda2pelea/pdf', 'App\Http\Controllers\Ronda2peleaController@pdf')->name('ronda2pelea.pdf');
 	Route::get('ronda3pelea/pdf', 'App\Http\Controllers\Ronda3peleaController@pdf')->name('ronda3pelea.pdf');
 	Route::get('ronda4pelea/pdf', 'App\Http\Controllers\Ronda4peleaController@pdf')->name('ronda4pelea.pdf');
 	Route::get('ronda5pelea/pdf', 'App\Http\Controllers\Ronda5peleaController@pdf')->name('ronda5pelea.pdf');
-	Route::get('ronda6pelea/pdf', 'App\Http\Controllers\Ronda6peleaController@pdf')->name('ronda6pelea.pdf');
-	Route::get('ronda7pelea/pdf', 'App\Http\Controllers\Ronda7peleaController@pdf')->name('ronda7pelea.pdf');
 
 	//Rondas de peleas
 	Route::resource('ronda1peleas', App\Http\Controllers\Ronda1peleaController::class)->middleware('auth');
@@ -53,5 +49,3 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('ronda3peleas', App\Http\Controllers\Ronda3peleaController::class)->middleware('auth');
 	Route::resource('ronda4peleas', App\Http\Controllers\Ronda4peleaController::class)->middleware('auth');
 	Route::resource('ronda5peleas', App\Http\Controllers\Ronda5peleaController::class)->middleware('auth');
-	Route::resource('ronda6peleas', App\Http\Controllers\Ronda6peleaController::class)->middleware('auth');
-	Route::resource('ronda7peleas', App\Http\Controllers\Ronda7peleaController::class)->middleware('auth');

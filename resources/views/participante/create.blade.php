@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Generar Participante
+    Registrar Participante
 @endsection
 
 @section('content')
@@ -15,7 +15,7 @@
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('gallos.index') }}">Gallos</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('participantes.index') }}">Gallos</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Participantes</li>
                     </ol>
                 </nav>
@@ -35,10 +35,10 @@
                             <span class="card-title">Generar Participante</span>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="{{ route('equipos.store') }}"  role="form" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('participantes.store') }}"  role="form" enctype="multipart/form-data">
                                 @csrf
 
-                                @include('equipo.form')
+                                @include('participante.form')
 
                             </form>
                         </div>

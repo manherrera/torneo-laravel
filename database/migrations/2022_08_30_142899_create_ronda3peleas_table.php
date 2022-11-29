@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('ronda3peleas', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->integer('peleador1')->unique();
-            $table->integer('peleador2')->unique();
+            $table->integer('peleador1')->unique()->nullable();
+            $table->integer('peleador2')->unique()->nullable();
             $table->timestamps();
         });
     }

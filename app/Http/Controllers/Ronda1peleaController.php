@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ronda1pelea;
-use App\Models\Gallo;
+use App\Models\Participante;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -45,9 +45,9 @@ class Ronda1peleaController extends Controller
     public function create()
     {
         $ronda1pelea = new Ronda1pelea();
-        $gallo = Gallo::pluck('id');
+        $participante = Participante::pluck('gallo1_anillo');
 
-        return view('ronda1pelea.create', compact('ronda1pelea', 'gallo'));
+        return view('ronda1pelea.create', compact('ronda1pelea', 'participante'));
     }
 
     /**
@@ -88,9 +88,9 @@ class Ronda1peleaController extends Controller
     public function edit($id)
     {
         $ronda1pelea = Ronda1pelea::find($id);
-        $gallo = Gallo::pluck('id');
+        $participante = Participante::pluck('gallo1_anillo');
 
-        return view('ronda1pelea.edit', compact('ronda1pelea','gallo'));
+        return view('ronda1pelea.edit', compact('ronda1pelea','participante'));
     }
 
     /**
