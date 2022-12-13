@@ -7,6 +7,7 @@ use App\Models\Participante;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use PDF;
 
 
 class Gallo3Controller extends Controller
@@ -32,5 +33,13 @@ class Gallo3Controller extends Controller
         $g3llos = Participante::orderBy('puntos3', 'DESC')->get();
 
         return view('gallo3.index', compact('g3llos'))->with('i');
+    }
+
+    public function pdf()
+    {
+        $g3llos = Participante::orderBy('puntos3', 'DESC')->get();
+
+        $pdf = PDF::loadView('gallo3.pdf',['g3llos'=>$g3llos]);
+        return $pdf->stream();
     }
 }

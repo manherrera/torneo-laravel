@@ -44,6 +44,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('ronda4pelea/pdf', 'App\Http\Controllers\Ronda4peleaController@pdf')->name('ronda4pelea.pdf');
 	Route::get('ronda5pelea/pdf', 'App\Http\Controllers\Ronda5peleaController@pdf')->name('ronda5pelea.pdf');
 
+	Route::get('gallo1/pdf', 'App\Http\Controllers\Gallo1Controller@pdf')->name('gallo1.pdf');
+	Route::get('gallo2/pdf', 'App\Http\Controllers\Gallo2Controller@pdf')->name('gallo2.pdf');
+	Route::get('gallo3/pdf', 'App\Http\Controllers\Gallo3Controller@pdf')->name('gallo3.pdf');
+	Route::get('gallo4/pdf', 'App\Http\Controllers\Gallo4Controller@pdf')->name('gallo4.pdf');
+	Route::get('gallo5/pdf', 'App\Http\Controllers\Gallo5Controller@pdf')->name('gallo5.pdf');
+
 	//Clasificaciones
 	Route::resource('gallos1', App\Http\Controllers\Gallo1Controller::class)->middleware('auth');
 	Route::resource('gallos2', App\Http\Controllers\Gallo2Controller::class)->middleware('auth');

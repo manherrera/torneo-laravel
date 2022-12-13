@@ -36,6 +36,12 @@
                                     {{ __('| Clasificacion por Puntos: ') }}
                                 </span>
 
+                                <div class="float-right">
+                                    <a href="{{ route('gallo1.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <i class="fas fa-file-pdf"></i>{{ __(' PDF') }}
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                         @if ($message = Session::get('success'))
