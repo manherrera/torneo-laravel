@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Gallos</h5>
-                                <span class="h2 font-weight-bold mb-0">4</span>
+                                <span class="h2 font-weight-bold mb-0">{{$gallo}}</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -56,7 +56,7 @@
                                 <span class="h2 font-weight-bold mb-0">{{$user}}</span>
                             </div>
                             <div class="col-auto">
-                                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                                <div class="icon icon-shape bg-info text-white rounded-circle shadow">
                                     <i class="ni ni-circle-08"></i>
                                 </div>
                             </div>
@@ -77,7 +77,7 @@
                                 <span class="h2 font-weight-bold mb-0">{{$total}}</span>
                             </div>
                             <div class="col-auto">
-                                <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                                <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
                                     <i class="ni ni-trophy"></i>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                 <h3 class="mb-0">Podio de Gallos 1</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('gallos1.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>
@@ -119,12 +119,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallos as $gallo)
+                                @foreach ($g1llos as $g1llo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->gallo1_anillo }}</td>
-                                        <td>{{ $gallo->peso1 }}</td>
-                                        <td>{{ $gallo->puntos1 }}</td>
+                                        <td>{{ $g1llo->gallo1_anillo }}</td>
+                                        <td>{{ $g1llo->peso1 }}</td>
+                                        <td>{{ $g1llo->puntos1 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -143,7 +143,7 @@
                                 <h3 class="mb-0">Podio de Gallos 2</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('gallos2.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>
@@ -159,12 +159,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallos as $gallo)
+                                @foreach ($g2llos as $g2llo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->gallo2_anillo }}</td>
-                                        <td>{{ $gallo->peso2 }}</td>
-                                        <td>{{ $gallo->puntos2 }}</td>
+                                        <td>{{ $g2llo->gallo2_anillo }}</td>
+                                        <td>{{ $g2llo->peso2 }}</td>
+                                        <td>{{ $g2llo->puntos2 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -199,12 +199,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallos as $gallo)
+                                @foreach ($g3llos as $g3llo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->gallo3_anillo }}</td>
-                                        <td>{{ $gallo->peso3 }}</td>
-                                        <td>{{ $gallo->puntos3 }}</td>
+                                        <td>{{ $g3llo->gallo3_anillo }}</td>
+                                        <td>{{ $g3llo->peso3 }}</td>
+                                        <td>{{ $g3llo->puntos3 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -239,12 +239,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallos as $gallo)
+                                @foreach ($g4llos as $g4llo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->gallo4_anillo }}</td>
-                                        <td>{{ $gallo->peso4 }}</td>
-                                        <td>{{ $gallo->puntos4 }}</td>
+                                        <td>{{ $g4llo->gallo4_anillo }}</td>
+                                        <td>{{ $g4llo->peso4 }}</td>
+                                        <td>{{ $g4llo->puntos4 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -279,12 +279,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($gallos as $gallo)
+                                @foreach ($g5llos as $g5llo)
                                     <tr>
                                         
-                                        <td>{{ $gallo->gallo5_anillo }}</td>
-                                        <td>{{ $gallo->peso5 }}</td>
-                                        <td>{{ $gallo->puntos5 }}</td>
+                                        <td>{{ $g5llo->gallo5_anillo }}</td>
+                                        <td>{{ $g5llo->peso5 }}</td>
+                                        <td>{{ $g5llo->puntos5 }}</td>
 
                                     </tr>
                                 @endforeach
