@@ -37,6 +37,7 @@ Route::group(['middleware' => 'auth'], function () {
 	
 	//Genenarción de PDF
 	Route::get('participante/pdf', 'App\Http\Controllers\ParticipanteController@pdf')->name('participante.pdf');
+	Route::get('participante/pdf2', 'App\Http\Controllers\ParticipanteController@pdf2')->name('participante.pdf2');
 	Route::get('ronda1pelea/pdf', 'App\Http\Controllers\Ronda1peleaController@pdf')->name('ronda1pelea.pdf');
 	Route::get('ronda2pelea/pdf', 'App\Http\Controllers\Ronda2peleaController@pdf')->name('ronda2pelea.pdf');
 	Route::get('ronda3pelea/pdf', 'App\Http\Controllers\Ronda3peleaController@pdf')->name('ronda3pelea.pdf');

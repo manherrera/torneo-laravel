@@ -37,7 +37,11 @@
 
                                 <div class="float-right">
                                     <a href="{{ route('participante.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
-                                    {{ __('PDF') }}
+                                    <i class="fas fa-file-pdf"></i>{{ __(' R4') }}
+                                    </a>
+                                &nbsp;
+                                    <a href="{{ route('participante.pdf2') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <i class="fas fa-file-pdf"></i>{{ __(' R5') }}
                                     </a>
                                 &nbsp;
                                     <a href="{{ route('participantes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
@@ -73,6 +77,9 @@
                                             <th>Gallo 4</th>
                                             <th>Peso</th>
 
+                                            <th>Gallo 5</th>
+                                            <th>Peso</th>
+
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -93,6 +100,9 @@
 
                                                 <td>{{ $participante->gallo4_anillo }}</td>
                                                 <td>{{ $participante->peso4 }}</td>
+
+                                                <td>{{ $participante->gallo5_anillo }}</td>
+                                                <td>{{ $participante->peso5 }}</td>
 
                                                 <td>
                                                     <form action="{{ route('participantes.destroy',$participante->id) }}" method="POST">

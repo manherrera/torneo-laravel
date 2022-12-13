@@ -16,7 +16,7 @@
                     <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ route('participantes.index') }}">Participantes</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Consulta</li>
+                    <li class="breadcrumb-item active" aria-current="page">Detalles</li>
                     </ol>
                 </nav>
                 </div>
@@ -30,7 +30,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Detalles</span>
+                            <span class="card-title"><strong>Detalles de:</strong> {{ $participante->equipo }} ({{ $participante->estado }})</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('participantes.index') }}"> Atras</a>
@@ -38,80 +38,66 @@
                     </div>
 
                     <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Equipo:</strong>
-                            {{ $participante->equipo }}
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead class="thead">
+                                    <tr>
+
+                                        <th>Datos</th>
+
+                                        <th>Gallo 1</th>
+
+                                        <th>Gallo 2</th>
+
+                                        <th>Gallo 3</th>
+
+                                        <th>Gallo 4</th>
+
+                                        <th>Gallo 5</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+
+                                            <td>Anillo:</td>
+                                            <td>{{ $participante->gallo1_anillo }}</td>
+                                            <td>{{ $participante->gallo2_anillo }}</td>
+                                            <td>{{ $participante->gallo3_anillo }}</td>
+                                            <td>{{ $participante->gallo4_anillo }}</td>
+                                            <td>{{ $participante->gallo5_anillo }}</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Peso:</td>
+                                            <td>{{ $participante->peso1 }}</td>
+                                            <td>{{ $participante->peso2 }}</td>
+                                            <td>{{ $participante->peso3 }}</td>
+                                            <td>{{ $participante->peso4 }}</td>
+                                            <td>{{ $participante->peso5 }}</td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td>Puntos:</td>
+                                            <td>{{ $participante->puntos1 }}</td>
+                                            <td>{{ $participante->puntos2 }}</td>
+                                            <td>{{ $participante->puntos3 }}</td>
+                                            <td>{{ $participante->puntos4 }}</td>
+                                            <td>{{ $participante->puntos5 }}</td>
+
+                                        </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="form-group">
-                            <strong>Gallo1 Anillo:</strong>
-                            {{ $participante->gallo1_anillo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peso1:</strong>
-                            {{ $participante->peso1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Estado1:</strong>
-                            {{ $participante->estado1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Puntos1:</strong>
-                            {{ $participante->puntos1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Gallo2 Anillo:</strong>
-                            {{ $participante->gallo2_anillo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peso2:</strong>
-                            {{ $participante->peso2 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Estado2:</strong>
-                            {{ $participante->estado2 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Puntos2:</strong>
-                            {{ $participante->puntos2 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Gallo3 Anillo:</strong>
-                            {{ $participante->gallo3_anillo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peso3:</strong>
-                            {{ $participante->peso3 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Estado3:</strong>
-                            {{ $participante->estado3 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Puntos3:</strong>
-                            {{ $participante->puntos3 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Gallo4 Anillo:</strong>
-                            {{ $participante->gallo4_anillo }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peso4:</strong>
-                            {{ $participante->peso4 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Estado4:</strong>
-                            {{ $participante->estado4 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Puntos4:</strong>
-                            {{ $participante->puntos4 }}
-                        </div>
+                        <br>
                         <div class="form-group">
                             <strong>Puntaje Total:</strong>
                             {{ $participante->puntaje_total }}
                         </div>
-
                     </div>
                 </div>
             </div>

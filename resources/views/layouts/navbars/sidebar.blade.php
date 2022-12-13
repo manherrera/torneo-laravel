@@ -129,7 +129,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ronda5peleas.index') }}">
-                                    {{ __('Ronda Final') }}
+                                    {{ __('Quinta Ronda') }}
                                 </a>
                             </li>
                         </ul>

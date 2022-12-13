@@ -28,6 +28,9 @@
                 <th>Gallo 4</th>
                 <th>Peso</th>
 
+                <th>Gallo 5</th>
+                <th>Peso</th>
+
             </tr>
         </thead>
         <tbody>
@@ -47,6 +50,9 @@
 
                     <td>{{ $participante->gallo4_anillo }}</td>
                     <td>{{ $participante->peso4 }}</td>
+
+                    <td>{{ $participante->gallo5_anillo }}</td>
+                    <td>{{ $participante->peso5 }}</td>
 
                 </tr>
             @endforeach

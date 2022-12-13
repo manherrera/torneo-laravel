@@ -17,14 +17,6 @@
             {!! $errors->first('peso1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('estado de gallo 1') }}
-            <br>
-            <input type="radio" id="activo" name="estado1" value="activo">
-            <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado1" value="inactivo">
-            <label for="activo">Inactivo</label><br>
-        </div>
-        <div class="form-group">
             {{ Form::label('puntos de gallo 1') }}
             {{ Form::text('puntos1', $participante->puntos1, ['class' => 'form-control' . ($errors->has('puntos1') ? ' is-invalid' : ''), 'placeholder' => 'Puntos1']) }}
             {!! $errors->first('puntos1', '<div class="invalid-feedback">:message</div>') !!}
@@ -38,14 +30,6 @@
             {{ Form::label('peso gallo 2') }}
             {{ Form::text('peso2', $participante->peso2, ['class' => 'form-control' . ($errors->has('peso2') ? ' is-invalid' : ''), 'placeholder' => 'Peso2']) }}
             {!! $errors->first('peso2', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
-            {{ Form::label('estado de gallo 2') }}
-            <br>
-            <input type="radio" id="activo" name="estado2" value="activo">
-            <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado2" value="inactivo">
-            <label for="activo">Inactivo</label><br>
         </div>
         <div class="form-group">
             {{ Form::label('puntos de gallo 2') }}
@@ -63,14 +47,6 @@
             {!! $errors->first('peso3', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('estado de gallo 3') }}
-            <br>
-            <input type="radio" id="activo" name="estado3" value="activo">
-            <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado3" value="inactivo">
-            <label for="activo">Inactivo</label><br>
-        </div>
-        <div class="form-group">
             {{ Form::label('puntos de gallo 3') }}
             {{ Form::text('puntos3', $participante->puntos3, ['class' => 'form-control' . ($errors->has('puntos3') ? ' is-invalid' : ''), 'placeholder' => 'Puntos3']) }}
             {!! $errors->first('puntos3', '<div class="invalid-feedback">:message</div>') !!}
@@ -86,19 +62,34 @@
             {!! $errors->first('peso4', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('estado de gallo 4') }}
-            <br>
-            <input type="radio" id="activo" name="estado4" value="activo">
-            <label for="inactivo">Activo</label><br>
-            <input type="radio" id="inactivo" name="estado4" value="inactivo">
-            <label for="activo">Inactivo</label><br>
-        </div>
-        <div class="form-group">
             {{ Form::label('puntos de gallo 4') }}
             {{ Form::text('puntos4', $participante->puntos4, ['class' => 'form-control' . ($errors->has('puntos4') ? ' is-invalid' : ''), 'placeholder' => 'Puntos4']) }}
             {!! $errors->first('puntos4', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+        <div class="form-group">
+            {{ Form::label('gallo 5 anillo') }}
+            {{ Form::text('gallo5_anillo', $participante->gallo5_anillo, ['class' => 'form-control' . ($errors->has('gallo5_anillo') ? ' is-invalid' : ''), 'placeholder' => 'Gallo5 Anillo']) }}
+            {!! $errors->first('gallo5_anillo', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('peso gallo 5') }}
+            {{ Form::text('peso5', $participante->peso5, ['class' => 'form-control' . ($errors->has('peso5') ? ' is-invalid' : ''), 'placeholder' => 'Peso5']) }}
+            {!! $errors->first('peso5', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('puntos de gallo 5') }}
+            {{ Form::text('puntos5', $participante->puntos5, ['class' => 'form-control' . ($errors->has('puntos5') ? ' is-invalid' : ''), 'placeholder' => 'Puntos5']) }}
+            {!! $errors->first('puntos5', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
+        <div class="form-group">
+            {{ Form::label('estado de equipo') }}
+            <br>
+            <input type="radio" id="activo" name="estado" value="activo">
+            <label for="inactivo">Activo</label><br>
+            <input type="radio" id="inactivo" name="estado" value="inactivo">
+            <label for="activo">Inactivo</label><br>
+        </div>
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Guardar</button>

@@ -11,7 +11,7 @@
 <body>
     <h2>Ronda 1</h2>
     <table class="table table-striped table-hover">
-        <thead align="center" class="thead">
+        <thead class="thead">
             <tr>
                 
                 <th>Peleador 1</th>
@@ -19,7 +19,7 @@
 
             </tr>
         </thead>
-        <tbody align="center">
+        <tbody>
             @foreach ($ronda1peleas as $ronda1pelea)
                 <tr>
                     

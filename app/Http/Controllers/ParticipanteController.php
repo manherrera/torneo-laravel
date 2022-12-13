@@ -33,6 +33,14 @@ class ParticipanteController extends Controller
         return $pdf->stream();
     }
 
+    public function pdf2()
+    {
+        $participantes = Participante::paginate(500);
+
+        $pdf = PDF::loadView('participante.pdf2',['participantes'=>$participantes]);
+        return $pdf->setPaper('a4', 'landscape')->stream('participante.pdf2');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -57,7 +65,7 @@ class ParticipanteController extends Controller
         $participante = Participante::create($request->all());
 
         return redirect()->route('participantes.index')
-            ->with('success', 'Participante created successfully.');
+            ->with('success', 'Participante creado con exito.');
     }
 
     /**
@@ -100,7 +108,7 @@ class ParticipanteController extends Controller
         $participante->update($request->all());
 
         return redirect()->route('participantes.index')
-            ->with('success', 'Participante updated successfully');
+            ->with('success', 'Participante editado con exito');
     }
 
     /**
@@ -113,6 +121,6 @@ class ParticipanteController extends Controller
         $participante = Participante::find($id)->delete();
 
         return redirect()->route('participantes.index')
-            ->with('success', 'Participante deleted successfully');
+            ->with('success', 'Participante eliminado con exito');
     }
 }
