@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('gallos2', App\Http\Controllers\Gallo2Controller::class)->middleware('auth');
 	Route::resource('gallos3', App\Http\Controllers\Gallo3Controller::class)->middleware('auth');
 	Route::resource('gallos4', App\Http\Controllers\Gallo4Controller::class)->middleware('auth');
+	Route::resource('gallos5', App\Http\Controllers\Gallo5Controller::class)->middleware('auth');
 	
 	//Rondas de peleas
 	Route::resource('ronda1peleas', App\Http\Controllers\Ronda1peleaController::class)->middleware('auth');

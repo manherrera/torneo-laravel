@@ -134,7 +134,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ronda2peleas.index') }}">
+                                <a class="nav-link" href="{{ route('gallos5.index') }}">
                                     {{ __('Gallos 5') }}
                                 </a>
                             </li>

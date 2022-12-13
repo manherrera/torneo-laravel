@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2>Lista de Gallos</h2>
+    <h2>Lista de Participantes</h2>
     <table class="table table-striped table-hover">
         <thead class="thead">
             <tr>
