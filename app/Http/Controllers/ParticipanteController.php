@@ -17,12 +17,20 @@ class ParticipanteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $participantes = Participante::paginate();
-
-        return view('participante.index', compact('participantes'))
-            ->with('i', (request()->input('page', 1) - 1) * $participantes->perPage());
+        $busqueda = $request->busqueda;
+        $participantes = Participante::where('equipo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('estado','LIKE','%'.$busqueda.'%')
+                          ->latest('id')
+                          ->paginate(50);
+        $data = [
+            'participantes'=>$participantes,
+            'busqueda'=>$busqueda,
+        ];
+ 
+        return view('participante.index', $data)
+        ->with('i', (request()->input('page', 1) - 1) * $participantes->perPage());
     }
 
     public function pdf()
