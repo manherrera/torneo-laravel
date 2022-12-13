@@ -72,7 +72,8 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">
-                        <i class="fas fa-home" style="color: #f4645f;"></i> {{ __('Inicio') }}
+                        <i class="fas fa-home" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Inicio') }}</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -96,6 +97,10 @@
                     <a class="nav-link" href="{{ route('participantes.index') }}">
                         <i class="ni ni-archive-2" style="color: #f4645f;"></i>
                         <span class="nav-link-text" style="color: #f4645f;">{{ __('Participantes') }}</span>
+                    </a>
+                    <a class="nav-link" href="{{ route('participantes.index') }}">
+                        <i class="ni ni-archive-2" style="color: #f4645f;"></i>
+                        <span class="nav-link-text" style="color: #f4645f;">{{ __('Clasificacion') }}</span>
                     </a>
                 </li>
 

@@ -38,7 +38,7 @@ class HomeController extends Controller
                 +Ronda1pelea::count();
 
         $participantes = DB::select('SELECT * FROM participantes ORDER BY ABS(puntaje_total) DESC LIMIT 10');
-        $gallos = DB::select('SELECT * FROM participantes ORDER BY ABS(puntos1) DESC LIMIT 15');
+        $gallos = DB::select('SELECT * FROM participantes ORDER BY ABS(puntos1) DESC LIMIT 10');
 
 
         return view('dashboard', compact('participantes', 'gallos'), [

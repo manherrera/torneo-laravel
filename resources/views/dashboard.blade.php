@@ -93,11 +93,14 @@
         </div>
         <div class="row mt-5">
             <div class="col-xl-8 mb-5 mb-xl-0">
+
+                <!--Podio 1-->
+
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h3 class="mb-0">Podio de Gallos</h3>
+                                <h3 class="mb-0">Podio de Gallos 1</h3>
                             </div>
                             <div class="col text-right">
                                 <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
@@ -105,7 +108,6 @@
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <!-- Projects table -->
                         <table class="table align-items-center table-flush">
                             <thead class="thead">
                                 <tr>
@@ -113,7 +115,6 @@
                                     <th>No Anillo</th>
                                     <th>Peso</th>
                                     <th>Puntos</th>
-                                    <th>Estado</th>
 
                                 </tr>
                             </thead>
@@ -124,7 +125,166 @@
                                         <td>{{ $gallo->gallo1_anillo }}</td>
                                         <td>{{ $gallo->peso1 }}</td>
                                         <td>{{ $gallo->puntos1 }}</td>
-                                        <td>{{ $gallo->estado1 }}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+
+                <!--Podio 2-->
+
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Podio de Gallos 2</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead">
+                                <tr>
+                                    
+                                    <th>No Anillo</th>
+                                    <th>Peso</th>
+                                    <th>Puntos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($gallos as $gallo)
+                                    <tr>
+                                        
+                                        <td>{{ $gallo->gallo2_anillo }}</td>
+                                        <td>{{ $gallo->peso2 }}</td>
+                                        <td>{{ $gallo->puntos2 }}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+
+                <!--Podio 3-->
+
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Podio de Gallos 3</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead">
+                                <tr>
+                                    
+                                    <th>No Anillo</th>
+                                    <th>Peso</th>
+                                    <th>Puntos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($gallos as $gallo)
+                                    <tr>
+                                        
+                                        <td>{{ $gallo->gallo3_anillo }}</td>
+                                        <td>{{ $gallo->peso3 }}</td>
+                                        <td>{{ $gallo->puntos3 }}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+
+                <!--Podio 4-->
+
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Podio de Gallos 4</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead">
+                                <tr>
+                                    
+                                    <th>No Anillo</th>
+                                    <th>Peso</th>
+                                    <th>Puntos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($gallos as $gallo)
+                                    <tr>
+                                        
+                                        <td>{{ $gallo->gallo4_anillo }}</td>
+                                        <td>{{ $gallo->peso4 }}</td>
+                                        <td>{{ $gallo->puntos4 }}</td>
+
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+
+                <!--Podio 5-->
+
+                <div class="card shadow">
+                    <div class="card-header border-0">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0">Podio de Gallos 5</h3>
+                            </div>
+                            <div class="col text-right">
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-items-center table-flush">
+                            <thead class="thead">
+                                <tr>
+                                    
+                                    <th>No Anillo</th>
+                                    <th>Peso</th>
+                                    <th>Puntos</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($gallos as $gallo)
+                                    <tr>
+                                        
+                                        <td>{{ $gallo->gallo5_anillo }}</td>
+                                        <td>{{ $gallo->peso5 }}</td>
+                                        <td>{{ $gallo->puntos5 }}</td>
 
                                     </tr>
                                 @endforeach
@@ -133,6 +293,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-xl-4">
 
         <div class="row mt">
@@ -143,10 +304,12 @@
                             <div class="col">
                                 <h3 class="mb-0">Podio Equipos</h3>
                             </div>
+                            <div class="col text-right">
+                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                            </div>
                         </div>
                     </div>
                     <div class="table-responsive">
-                        <!-- Projects table -->
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
