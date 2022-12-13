@@ -183,7 +183,7 @@
                                 <h3 class="mb-0">Podio de Gallos 3</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('gallos3.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
                                 <h3 class="mb-0">Podio de Gallos 4</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('gallos4.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>

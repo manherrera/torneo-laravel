@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Participante
+    Gallos_1
 @endsection
 
 @section('content')

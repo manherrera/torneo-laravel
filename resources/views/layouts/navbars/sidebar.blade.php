@@ -124,18 +124,18 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ronda2peleas.index') }}">
+                                <a class="nav-link" href="{{ route('gallos3.index') }}">
                                     {{ __('Gallos 3') }}
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ronda2peleas.index') }}">
-                                    {{ __('Gallos 3') }}
+                                <a class="nav-link" href="{{ route('gallos4.index') }}">
+                                    {{ __('Gallos 4') }}
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('ronda2peleas.index') }}">
-                                    {{ __('Gallos 3') }}
+                                    {{ __('Gallos 5') }}
                                 </a>
                             </li>
                         </ul>

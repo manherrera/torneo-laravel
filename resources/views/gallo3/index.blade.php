@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Gallos_2
+    Gallos_3
 @endsection
 
 @section('content')
@@ -16,7 +16,7 @@
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home"></i></a></li>
                     <li class="breadcrumb-item"><a href="{{ route('participantes.index') }}">Clasificacion</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Gallos 2 | Inicio</li>
+                    <li class="breadcrumb-item active" aria-current="page">Gallos 3 | Inicio</li>
                 </ol>
               </nav>
             </div>
@@ -57,13 +57,13 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($g2llos as $g2llo)
+                                        @foreach ($g3llos as $g3llo)
                                             <tr>
 
                                                 <td>{{ ++$i }}</td>
-                                                <td>{{ $g2llo->gallo2_anillo }}</td>
-                                                <td>{{ $g2llo->peso2 }}</td>
-                                                <td>{{ $g2llo->puntos2 }}</td>
+                                                <td>{{ $g3llo->gallo3_anillo }}</td>
+                                                <td>{{ $g3llo->peso3 }}</td>
+                                                <td>{{ $g3llo->puntos3 }}</td>
 
                                             </tr>
                                         @endforeach
