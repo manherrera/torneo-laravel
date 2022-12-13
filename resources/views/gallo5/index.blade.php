@@ -32,7 +32,8 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
 
                                 <span id="card_title">
-                                    {{ __('Clasificacion por Puntos: ') }}
+                                    <strong> Gallos 5 </strong>
+                                    {{ __('| Clasificacion por Puntos: ') }}
                                 </span>
 
                             </div>
