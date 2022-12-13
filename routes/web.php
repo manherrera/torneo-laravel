@@ -50,7 +50,10 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('gallo4/pdf', 'App\Http\Controllers\Gallo4Controller@pdf')->name('gallo4.pdf');
 	Route::get('gallo5/pdf', 'App\Http\Controllers\Gallo5Controller@pdf')->name('gallo5.pdf');
 
+	Route::get('equipo/pdf', 'App\Http\Controllers\EquipoController@pdf')->name('equipo.pdf');
+
 	//Clasificaciones
+	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');
 	Route::resource('gallos1', App\Http\Controllers\Gallo1Controller::class)->middleware('auth');
 	Route::resource('gallos2', App\Http\Controllers\Gallo2Controller::class)->middleware('auth');
 	Route::resource('gallos3', App\Http\Controllers\Gallo3Controller::class)->middleware('auth');

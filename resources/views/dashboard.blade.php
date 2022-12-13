@@ -305,7 +305,7 @@
                                 <h3 class="mb-0">Podio Equipos</h3>
                             </div>
                             <div class="col text-right">
-                                <a href="{{ route('participantes.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
+                                <a href="{{ route('equipos.index') }}" class="btn btn-sm btn-primary">Ver Todo</a>
                             </div>
                         </div>
                     </div>

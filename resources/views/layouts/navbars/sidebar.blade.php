@@ -109,7 +109,7 @@
                     <div class="collapse show" id="navbar-class">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('ronda1peleas.index') }}">
+                                <a class="nav-link" href="{{ route('equipos.index') }}">
                                     {{ __('Equipos') }}
                                 </a>
                             </li>
