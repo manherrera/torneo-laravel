@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 use App\Models\Participante;
 use App\Models\Ronda1pelea;
 use App\Models\Ronda2pelea;
@@ -36,7 +37,7 @@ class HomeController extends Controller
     {
         $user = User::count();
         $participante = Participante::count();
-        $gallo = Participante::count()*4;
+        $role = Role::count();
         $total = Ronda1pelea::count()+Ronda2pelea::count()+Ronda3pelea::count()
                 +Ronda4pelea::count()+Ronda5pelea::count();
 
@@ -50,8 +51,8 @@ class HomeController extends Controller
 
         return view('dashboard', compact('participantes', 'g1llos', 'g2llos', 'g3llos', 'g4llos', 'g5llos'), [
             'user' => $user,
+            'role' => $role,
             'participante' => $participante,
-            'gallo' => $gallo,
             'total' => $total
 
         ])

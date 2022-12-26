@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -25,6 +25,10 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        //Usuario super Admin
+        // Otorga todos los permisos a la función "Superadministrador"       
+        Gate::before(function ($user, $ability) {
+            return $user->email == 'derby_gallosms@gmail.com' ?? null;
+        });
     }
 }

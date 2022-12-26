@@ -30,10 +30,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
-});
 
-	//Registro de partcipantes
-	Route::resource('participantes', App\Http\Controllers\ParticipanteController::class)->middleware('auth');
+
+	//Roles y Permisos
+	Route::resource('roles', App\Http\Controllers\RolController::class);
+	Route::resource('users', App\Http\Controllers\UserController::class);
 	
 	//Genenarción de PDF
 	Route::get('participante/pdf', 'App\Http\Controllers\ParticipanteController@pdf')->name('participante.pdf');
@@ -51,6 +52,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::get('gallo5/pdf', 'App\Http\Controllers\Gallo5Controller@pdf')->name('gallo5.pdf');
 
 	Route::get('equipo/pdf', 'App\Http\Controllers\EquipoController@pdf')->name('equipo.pdf');
+
+});
+
+	//Registro de partcipantes
+	Route::resource('participantes', App\Http\Controllers\ParticipanteController::class)->middleware('auth');
 
 	//Clasificaciones
 	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');

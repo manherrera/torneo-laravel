@@ -89,6 +89,12 @@
                                     {{ __('Perfil de usuario') }}
                                 </a>
                             </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">
+                                    {{ __('Gestion de Usuarios') }}
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -177,6 +183,23 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+            </ul>
+            <!-- Divider -->
+            <hr class="my-3">
+            <!-- Heading -->
+            <h6 class="navbar-heading text-muted">Funciones Avanzadas</h6>
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-md-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="/roles">
+                        <i class="fas fa-user-lock"></i> Roles
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users">
+                        <i class="fas fa-users"></i> Gestion de usuarios
+                    </a>
                 </li>
             </ul>
         </div>
