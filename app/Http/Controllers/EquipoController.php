@@ -42,4 +42,12 @@ class EquipoController extends Controller
         $pdf = PDF::loadView('equipo.pdf',['equipos'=>$equipos]);
         return $pdf->stream();
     }
+
+    public function destroy($id)
+    {
+        $participante = Participante::find($id)->delete();
+
+        return redirect()->route('equipos.index')
+            ->with('success', 'Participante eliminado con exito');
+    }
 }

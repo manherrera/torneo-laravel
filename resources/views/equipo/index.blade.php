@@ -59,6 +59,7 @@
                                             <th>No</th>
                                             <th>Nombre</th>
                                             <th>Puntaje</th>
+                                            <th>Acciones</th>
 
                                         </tr>
                                     </thead>
@@ -71,6 +72,14 @@
 
                                             <td><i class="fas fa-arrow-up text-success mr-3"></i>
                                                 {{ $equipo->puntaje_total }}
+                                            </td>
+
+                                            <td>
+                                                <form action="{{ route('equipos.destroy',$equipo->id) }}" method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
+                                                </form>
                                             </td>
                                         </tr>
                                         @endforeach
