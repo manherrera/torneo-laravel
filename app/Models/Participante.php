@@ -54,7 +54,7 @@ class Participante extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo','gallo1_anillo','peso1','puntos1','gallo2_anillo','peso2','puntos2','gallo3_anillo','peso3','puntos3','gallo4_anillo','peso4','puntos4','gallo5_anillo','peso5','puntos5','puntaje_total','estado'];
+    protected $fillable = ['equipo','gallo1_anillo','peso1','puntos1','gallo2_anillo','peso2','puntos2','gallo3_anillo','peso3','puntos3','gallo4_anillo','peso4','puntos4','gallo5_anillo','peso5','puntos5','puntaje_total'];
 
 
 

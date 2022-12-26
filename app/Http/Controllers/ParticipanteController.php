@@ -21,9 +21,13 @@ class ParticipanteController extends Controller
     {
         $busqueda = $request->busqueda;
         $participantes = Participante::where('equipo','LIKE','%'.$busqueda.'%')
-                          ->orWhere('estado','LIKE','%'.$busqueda.'%')
+                          ->orWhere('gallo1_anillo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('gallo2_anillo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('gallo3_anillo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('gallo4_anillo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('gallo5_anillo','LIKE','%'.$busqueda.'%')
                           ->latest('id')
-                          ->paginate(50);
+                          ->paginate(25);
         $data = [
             'participantes'=>$participantes,
             'busqueda'=>$busqueda,

@@ -30,7 +30,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title"><strong>Detalles de:</strong> {{ $participante->equipo }} ({{ $participante->estado }})</span>
+                            <span class="card-title"><strong>Detalles de:</strong> {{ $participante->equipo }}</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('participantes.index') }}"> Atras</a>

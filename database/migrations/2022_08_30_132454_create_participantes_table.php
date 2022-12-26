@@ -42,7 +42,6 @@ return new class extends Migration
 
             //
             $table->integer('puntaje_total')->nullable();
-            $table->string('estado', 255)->nullable();
             $table->timestamps();
         });
     }
