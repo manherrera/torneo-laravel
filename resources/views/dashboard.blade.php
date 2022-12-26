@@ -41,7 +41,7 @@
                         </div>
                         <p class="mt-3 mb-0 text-muted text-sm">
                             <span class="text-success mr-2"><i class="fas fa-arrow-up"></i></span>
-                            <span class="text-nowrap">Total de Peleas a disputar</span>
+                            <span class="text-nowrap">Total de Peleas a disputarse</span>
                         </p>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         </div>
                         <p class="mt-3 mb-0 text-muted text-sm">
                             <span class="text-success mr-2"><i class="fas fa-arrow-up"></i></span>
-                            <span class="text-nowrap">Total de Roles</span>
+                            <span class="text-nowrap">Total de Roles disponibles</span>
                         </p>
                     </div>
                 </div>
