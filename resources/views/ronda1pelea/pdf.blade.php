@@ -12,20 +12,29 @@
     <h2>Ronda 1</h2>
     <table class="table table-striped table-hover">
         <thead class="thead">
-            <tr>
-                
+            <tr>       
+                <th>Equipo</th>
                 <th>Peleador 1</th>
+                <th>Peso 1</th>
+                <th>Equipo</th>
                 <th>Peleador 2</th>
+                <th>Peso 2</th>
 
+                <th>DIF Peso</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
             @foreach ($ronda1peleas as $ronda1pelea)
                 <tr>
                     
+                    <td>{{ $ronda1pelea->equipo1 }}</td>
                     <td>{{ $ronda1pelea->peleador1 }}</td>
+                    <td>{{ $ronda1pelea->peso1 }}</td>
+                    <td>{{ $ronda1pelea->equipo2 }}</td>
                     <td>{{ $ronda1pelea->peleador2 }}</td>
+                    <td>{{ $ronda1pelea->peso2 }}</td>
 
+                    <td></td>
                 </tr>
             @endforeach
         </tbody>

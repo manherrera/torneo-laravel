@@ -9,23 +9,32 @@
 </head>
 
 <body>
-    <h2>Ronda 5 (Cuartos de Final)</h2>
+    <h2>Ronda 5</h2>
     <table class="table table-striped table-hover">
         <thead class="thead">
             <tr>
-                
+                <th>Equipo</th>
                 <th>Peleador 1</th>
+                <th>Peso 1</th>
+                <th>Equipo</th>
                 <th>Peleador 2</th>
+                <th>Peso 2</th>
 
+                <th>DIF Peso</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
             @foreach ($ronda5peleas as $ronda5pelea)
                 <tr>
                     
+                    <td>{{ $ronda5pelea->equipo1 }}</td>
                     <td>{{ $ronda5pelea->peleador1 }}</td>
+                    <td>{{ $ronda5pelea->peso1 }}</td>
+                    <td>{{ $ronda5pelea->equipo2 }}</td>
                     <td>{{ $ronda5pelea->peleador2 }}</td>
+                    <td>{{ $ronda5pelea->peso2 }}</td>
 
+                    <td></td>
                 </tr>
             @endforeach
         </tbody>

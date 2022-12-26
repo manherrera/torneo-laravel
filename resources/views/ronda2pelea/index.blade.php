@@ -59,20 +59,31 @@
                                     <thead align="center" class="thead">
                                         <tr>
                                             <th>No de Pelea</th>
-                                            
-                                            <th>Peleador 1</th>
-                                            <th>Peleador 2</th>
-
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody align="center">
-                                        @foreach ($ronda2peleas as $ronda2pelea)
-                                            <tr>
-                                                <td>{{ ++$i }}</td>
                                                 
-                                                <td>{{ $ronda2pelea->peleador1 }}</td>
-                                                <td>{{ $ronda2pelea->peleador2 }}</td>
+                                                <th>Equipo</th>
+                                                <th>Peleador 1</th>
+                                                <th>Peso 1</th>
+                                                <th>Equipo</th>
+                                                <th>Peleador 2</th>
+                                                <th>Peso 2</th>
+
+                                                <th>DIF Peso</th>
+                                                <th>Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody align="center">
+                                            @foreach ($ronda2peleas as $ronda2pelea)
+                                                <tr>
+                                                    <td>{{ ++$i }}</td>
+                                                    
+                                                    <td>{{ $ronda2pelea->equipo1 }}</td>
+                                                    <td>{{ $ronda2pelea->peleador1 }}</td>
+                                                    <td>{{ $ronda2pelea->peso1 }}</td>
+                                                    <td>{{ $ronda2pelea->equipo2 }}</td>
+                                                    <td>{{ $ronda2pelea->peleador2 }}</td>
+                                                    <td>{{ $ronda2pelea->peso2 }}</td>
+
+                                                    <td></td>
 
                                                 <td>
                                                     <form action="{{ route('ronda2peleas.destroy',$ronda2pelea->id) }}" method="POST">

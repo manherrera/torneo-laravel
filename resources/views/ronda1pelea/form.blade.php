@@ -3,12 +3,12 @@
         
         <div class="form-group">
             {{ Form::label('Peleador 1') }}
-            {{ Form::select('peleador1', $participante, $ronda1pelea->peleador1, ['class' => 'form-control' . ($errors->has('peleador1') ? ' is-invalid' : ''), 'placeholder' => '--Peleador 1--']) }}
+            {{ Form::select('peleador1', $anillo, $ronda1pelea->peleador1, ['class' => 'form-control' . ($errors->has('peleador1') ? ' is-invalid' : ''), 'placeholder' => '--Peleador 1--']) }}
             {!! $errors->first('peleador1', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('Peleador 2') }}
-            {{ Form::select('peleador2', $participante, $ronda1pelea->peleador2, ['class' => 'form-control' . ($errors->has('peleador2') ? ' is-invalid' : ''), 'placeholder' => '--Peleador 2--']) }}
+            {{ Form::select('peleador2', $anillo, $ronda1pelea->peleador2, ['class' => 'form-control' . ($errors->has('peleador2') ? ' is-invalid' : ''), 'placeholder' => '--Peleador 2--']) }}
             {!! $errors->first('peleador2', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

@@ -34,7 +34,7 @@ class Ronda1peleaController extends Controller
         $ronda1peleas = Ronda1pelea::paginate(64);
 
         $pdf = PDF::loadView('ronda1pelea.pdf',['ronda1peleas'=>$ronda1peleas]);
-        return $pdf->stream();
+        return $pdf->setPaper('a4', 'landscape')->stream('ronda1pelea.pdf');
     }
 
     /**
@@ -45,9 +45,11 @@ class Ronda1peleaController extends Controller
     public function create()
     {
         $ronda1pelea = new Ronda1pelea();
-        $participante = Participante::pluck('gallo1_anillo', 'gallo1_anillo');
+        $anillo = Participante::pluck('gallo1_anillo','gallo1_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso1','peso1');
 
-        return view('ronda1pelea.create', compact('ronda1pelea', 'participante'));
+        return view('ronda1pelea.create', compact('ronda1pelea','anillo','equipo','peso'));
     }
 
     /**
@@ -88,9 +90,11 @@ class Ronda1peleaController extends Controller
     public function edit($id)
     {
         $ronda1pelea = Ronda1pelea::find($id);
-        $participante = Participante::pluck('gallo1_anillo', 'gallo1_anillo');
+        $anillo = Participante::pluck('gallo1_anillo','gallo1_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso1','peso1');
 
-        return view('ronda1pelea.edit', compact('ronda1pelea','participante'));
+        return view('ronda1pelea.edit', compact('ronda1pelea','anillo','equipo','peso'));
     }
 
     /**

@@ -60,9 +60,14 @@
                                         <tr>
                                             <th>No de Pelea</th>
                                             
+                                            <th>Equipo</th>
                                             <th>Peleador 1</th>
+                                            <th>Peso 1</th>
+                                            <th>Equipo</th>
                                             <th>Peleador 2</th>
+                                            <th>Peso 2</th>
 
+                                            <th>DIF Peso</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
@@ -71,9 +76,14 @@
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 
+                                                <td>{{ $ronda4pelea->equipo1 }}</td>
                                                 <td>{{ $ronda4pelea->peleador1 }}</td>
+                                                <td>{{ $ronda4pelea->peso1 }}</td>
+                                                <td>{{ $ronda4pelea->equipo2 }}</td>
                                                 <td>{{ $ronda4pelea->peleador2 }}</td>
+                                                <td>{{ $ronda4pelea->peso2 }}</td>
 
+                                                <td></td>
                                                 <td>
                                                     <form action="{{ route('ronda4peleas.destroy',$ronda4pelea->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-primary " href="{{ route('ronda4peleas.show',$ronda4pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>

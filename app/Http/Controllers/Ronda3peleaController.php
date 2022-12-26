@@ -34,7 +34,7 @@ class Ronda3peleaController extends Controller
         $ronda3peleas = Ronda3pelea::paginate(16);
 
         $pdf = PDF::loadView('ronda3pelea.pdf',['ronda3peleas'=>$ronda3peleas]);
-        return $pdf->stream();
+        return $pdf->setPaper('a4', 'landscape')->stream('ronda3pelea.pdf');
     }
 
     /**

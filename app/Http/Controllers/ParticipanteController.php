@@ -42,7 +42,7 @@ class ParticipanteController extends Controller
         $participantes = Participante::paginate(500);
 
         $pdf = PDF::loadView('participante.pdf',['participantes'=>$participantes]);
-        return $pdf->stream();
+        return $pdf->setPaper('a4', 'landscape')->stream('participante.pdf');
     }
 
     public function pdf2()

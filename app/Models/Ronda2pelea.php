@@ -33,20 +33,7 @@ class Ronda2pelea extends Model
      *
      * @var array
      */
-    protected $fillable = ['peleador1','peleador2'];
-
-    public function gallo1()
-    {
-        return $this->hasOne('App\Models\Gallo', 'id', 'peleador1');
-    }
-    
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
-     */
-    public function gallo2()
-    {
-        return $this->hasOne('App\Models\Gallo', 'id', 'peleador2');
-    }
-
+    protected $fillable = ['equipo1','peleador1','peso1',
+                           'equipo2','peleador2','peso2'];
 
 }

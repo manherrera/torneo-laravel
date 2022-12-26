@@ -16,8 +16,12 @@ return new class extends Migration
         Schema::create('ronda1peleas', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
+            $table->string('equipo1')->nullable();
             $table->integer('peleador1')->unique()->nullable();
+            $table->float('peso1')->nullable();
+            $table->string('equipo2')->nullable();
             $table->integer('peleador2')->unique()->nullable();
+            $table->float('peso2')->nullable();
             $table->timestamps();
         });
     }
