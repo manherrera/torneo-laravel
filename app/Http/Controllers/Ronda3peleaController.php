@@ -45,9 +45,11 @@ class Ronda3peleaController extends Controller
     public function create()
     {
         $ronda3pelea = new Ronda3pelea();
-        $participante = Participante::pluck('gallo3_anillo', 'gallo3_anillo');
+        $anillo = Participante::pluck('gallo3_anillo','gallo3_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso3','peso3');
 
-        return view('ronda3pelea.create', compact('ronda3pelea', 'participante'));
+        return view('ronda3pelea.create', compact('ronda3pelea','anillo','equipo','peso'));
     }
 
     /**
@@ -88,9 +90,11 @@ class Ronda3peleaController extends Controller
     public function edit($id)
     {
         $ronda3pelea = Ronda3pelea::find($id);
-        $participante = Participante::pluck('gallo3_anillo', 'gallo3_anillo');
+        $anillo = Participante::pluck('gallo3_anillo','gallo3_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso3','peso3');
 
-        return view('ronda3pelea.edit', compact('ronda3pelea','participante'));
+        return view('ronda3pelea.edit', compact('ronda3pelea','anillo','equipo','peso'));
     }
 
     /**

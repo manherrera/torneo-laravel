@@ -22,8 +22,7 @@ class Ronda3pelea extends Model
 {
     
     static $rules = [
-		'peleador1' => 'required',
-		'peleador2' => 'required',
+      
     ];
 
     protected $perPage = 20;

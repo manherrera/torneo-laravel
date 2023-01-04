@@ -45,9 +45,11 @@ class Ronda4peleaController extends Controller
     public function create()
     {
         $ronda4pelea = new Ronda4pelea();
-        $participante = Participante::pluck('gallo4_anillo', 'gallo4_anillo');
+        $anillo = Participante::pluck('gallo4_anillo','gallo4_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso4','peso4');
 
-        return view('ronda4pelea.create', compact('ronda4pelea', 'participante'));
+        return view('ronda4pelea.create', compact('ronda4pelea','anillo','equipo','peso'));
     }
 
     /**
@@ -88,9 +90,11 @@ class Ronda4peleaController extends Controller
     public function edit($id)
     {
         $ronda4pelea = Ronda4pelea::find($id);
-        $participante = Participante::pluck('gallo4_anillo', 'gallo4_anillo');
+        $anillo = Participante::pluck('gallo4_anillo','gallo4_anillo');
+        $equipo = Participante::pluck('equipo','equipo');
+        $peso = Participante::pluck('peso4','peso4');
 
-        return view('ronda4pelea.edit', compact('ronda4pelea','participante'));
+        return view('ronda4pelea.edit', compact('ronda4pelea','anillo','equipo','peso'));
     }
 
     /**
