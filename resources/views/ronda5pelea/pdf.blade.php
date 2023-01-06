@@ -23,7 +23,7 @@
                 <th>DIF Peso</th>
             </tr>
         </thead>
-        <tbody align="center">
+        <tbody>
             @foreach ($ronda5peleas as $ronda5pelea)
                 <tr>
                     

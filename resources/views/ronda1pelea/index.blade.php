@@ -56,7 +56,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table align-items-center table-flush">
-                                    <thead align="center" class="thead">
+                                    <thead class="thead">
                                         <tr>
                                             <th>No de Pelea</th>
                                             
@@ -71,7 +71,7 @@
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
-                                    <tbody align="center">
+                                    <tbody>
                                         @foreach ($ronda1peleas as $ronda1pelea)
                                             <tr>
                                                 <td>{{ ++$i }}</td>
