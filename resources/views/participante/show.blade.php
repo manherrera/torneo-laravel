@@ -96,7 +96,7 @@
                         <br>
                         <div class="form-group">
                             <strong>Puntaje Total:</strong>
-                            {{ $participante->puntaje_total }}
+                            {{ $participante->puntos1 + $participante->puntos2 + $participante->puntos3 + $participante->puntos4 + $participante->puntos5 }}
                         </div>
                     </div>
                 </div>
