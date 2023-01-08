@@ -1,4 +1,4 @@
-*/ Trigger para insercion multiple (Puntos): /*
+/* Trigger para insercion multiple (Puntos): */
 
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_puntaje AFTER INSERT ON participantes FOR EACH ROW
@@ -15,7 +15,7 @@ END;$$
 
 
 
-*/ Trigger para edicion multiple (Puntos): /*
+/* Trigger para edicion multiple (Puntos): */
 
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_puntaje2 AFTER UPDATE ON puntajes FOR EACH ROW
@@ -33,7 +33,7 @@ END;$$
 
 
 
-*/ Trigger para suma de puntajes (Puntaje Total): /*
+/* Trigger para suma de puntajes (Puntaje Total): */
 
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_suma_puntaje AFTER UPDATE ON puntajes FOR EACH ROW

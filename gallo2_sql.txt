@@ -1,4 +1,4 @@
-*/ Trigger para insercion multiple (Anillo Gallos 2): /*
+/* Trigger para insercion multiple (Anillo Gallos 2): */
 
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_g2llo AFTER INSERT ON participantes FOR EACH ROW
@@ -11,7 +11,7 @@ END;$$
 
 
 
-*/ Trigger para edicion multiple (Anillo Gallos 2): /*
+/* Trigger para edicion multiple (Anillo Gallos 2): */
 
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_g2llo2 AFTER UPDATE ON participantes FOR EACH ROW
