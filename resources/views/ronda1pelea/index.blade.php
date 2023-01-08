@@ -37,11 +37,15 @@
 
                                 <div class="float-right">
                                     <a href="{{ route('ronda1pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <i class="fas fa-bolt"></i>{{ __(' Match') }}
+                                    </a>
+                                &nbsp;
+                                    <a href="{{ route('ronda1pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
                                     <i class="fas fa-file-pdf"></i>{{ __(' PDF') }}
                                     </a>
                                 &nbsp;
                                     <a href="{{ route('ronda1peleas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Crear Pelea') }}
+                                    <i class="fas fa-plus"></i>{{ __(' ADD') }}
                                     </a>
                                 </div>
                                 
@@ -83,7 +87,7 @@
                                                 <td>{{ $ronda1pelea->peleador2 }}</td>
                                                 <td>{{ $ronda1pelea->peso2 }}</td>
 
-                                                <td></td>
+                                                <td>{{ $ronda1pelea->peso1 - $ronda1pelea->peso2  }}</td>
                                                 <td>
                                                     <form action="{{ route('ronda1peleas.destroy',$ronda1pelea->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-primary " href="{{ route('ronda1peleas.show',$ronda1pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>
