@@ -8,13 +8,17 @@ use Illuminate\Database\Eloquent\Model;
  * Class Ronda4pelea
  *
  * @property $id
- * @property $peleador1
- * @property $peleador2
+ * @property $equipo1
+ * @property $participante_id
+ * @property $peso1
+ * @property $equipo2
+ * @property $clonparticipante_id
+ * @property $peso2
  * @property $created_at
  * @property $updated_at
  *
- * @property Gallo1 $gallo1
- * @property Gallo2 $gallo2
+ * @property Clonparticipante $clonparticipante
+ * @property Participante $participante
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -22,7 +26,6 @@ class Ronda4pelea extends Model
 {
     
     static $rules = [
-      
     ];
 
     protected $perPage = 20;
@@ -32,7 +35,24 @@ class Ronda4pelea extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo1','peleador1','peso1',
-                           'equipo2','peleador2','peso2'];
+    protected $fillable = ['equipo1','participante_id','peso1','equipo2','clonparticipante_id','peso2'];
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function clonparticipante()
+    {
+        return $this->hasOne('App\Models\Clonparticipante', 'id', 'clonparticipante_id');
+    }
+    
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function participante()
+    {
+        return $this->hasOne('App\Models\Participante', 'id', 'participante_id');
+    }
+    
 
 }
