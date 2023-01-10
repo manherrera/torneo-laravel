@@ -16,12 +16,18 @@ return new class extends Migration
         Schema::create('ronda5peleas', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
+
             $table->string('equipo1')->nullable();
-            $table->integer('peleador1')->unique()->nullable();
+            $table->bigInteger('participante_id')->unsigned()->unique()->nullable();
             $table->float('peso1')->nullable();
+
             $table->string('equipo2')->nullable();
-            $table->integer('peleador2')->unique()->nullable();
+            $table->bigInteger('clonparticipante_id')->unsigned()->unique()->nullable();
             $table->float('peso2')->nullable();
+
+            $table->foreign('participante_id')->references('id')->on('participantes')->onDelete('cascade');
+            $table->foreign('clonparticipante_id')->references('id')->on('clonparticipantes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
