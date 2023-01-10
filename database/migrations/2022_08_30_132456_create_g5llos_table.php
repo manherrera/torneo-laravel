@@ -21,7 +21,6 @@ return new class extends Migration
             
             //Datos para Gallo 1
             $table->integer('gallo5_anillo')->nullable();
-            $table->integer('peso5')->nullable();
             //
             $table->foreign('equipo_id')->references('id')->on('participantes')->onDelete('cascade');
             $table->timestamps();

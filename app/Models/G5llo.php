@@ -33,7 +33,7 @@ class G5llo extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo_id','gallo5_anillo','peso5'];
+    protected $fillable = ['equipo_id','gallo5_anillo'];
 
 
     /**
