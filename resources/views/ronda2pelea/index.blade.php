@@ -37,11 +37,15 @@
 
                                 <div class="float-right">
                                     <a href="{{ route('ronda2pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <i class="fas fa-bolt"></i>{{ __(' Match') }}
+                                    </a>
+                                &nbsp;
+                                    <a href="{{ route('ronda2pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
                                     <i class="fas fa-file-pdf"></i>{{ __(' PDF') }}
                                     </a>
                                 &nbsp;
                                     <a href="{{ route('ronda2peleas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                    {{ __('Crear Pelea') }}
+                                    <i class="fas fa-plus"></i>{{ __(' ADD') }}
                                     </a>
                                 </div>
                                 
@@ -62,10 +66,10 @@
                                                 
                                                 <th>Equipo</th>
                                                 <th>Peleador 1</th>
-                                                <th>Peso 1</th>
+                                                <th>Peso</th>
                                                 <th>Equipo</th>
                                                 <th>Peleador 2</th>
-                                                <th>Peso 2</th>
+                                                <th>Peso</th>
 
                                                 <th>DIF Peso</th>
                                                 <th>Acciones</th>
@@ -76,14 +80,14 @@
                                                 <tr>
                                                     <td>{{ ++$i }}</td>
                                                     
-                                                    <td>{{ $ronda2pelea->equipo1 }}</td>
-                                                    <td>{{ $ronda2pelea->peleador1 }}</td>
-                                                    <td>{{ $ronda2pelea->peso1 }}</td>
-                                                    <td>{{ $ronda2pelea->equipo2 }}</td>
-                                                    <td>{{ $ronda2pelea->peleador2 }}</td>
-                                                    <td>{{ $ronda2pelea->peso2 }}</td>
+                                                    <td>{{ $ronda2pelea->participante->equipo }}</td>
+                                                    <td>{{ $ronda2pelea->participante->gallo2_anillo }}</td>
+                                                    <td>{{ $ronda2pelea->participante->peso2 }}</td>
+                                                    <td>{{ $ronda2pelea->clonparticipante->equipo }}</td>
+                                                    <td>{{ $ronda2pelea->clonparticipante->gallo2_anillo }}</td>
+                                                    <td>{{ $ronda2pelea->clonparticipante->peso2 }}</td>
 
-                                                    <td></td>
+                                                    <td>{{ $ronda2pelea->participante->peso2 - $ronda2pelea->clonparticipante->peso2  }}</td>
 
                                                 <td>
                                                     <form action="{{ route('ronda2peleas.destroy',$ronda2pelea->id) }}" method="POST">
