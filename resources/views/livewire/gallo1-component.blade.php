@@ -2,55 +2,32 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('Peleador 1') }}
-            <div class="row g-3">
-                <div class="col">
-                    <select name="equipo1" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:change="listarG1llos($event.target.value)">
-                        <option>--- Seleccionar Equipo ---</option>
-                        @foreach($participantes as $participante)
-                        <option value="{{$participante->equipo}}">{{$participante->equipo}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="col">
-                    <select name="peleador1" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                        <option>--- Seleccionar Anillo ---</option>
-                        @if ($g1llos)
-                            @foreach($g1llos as $g1llo)
-                            <option value="{{$g1llo->gallo1_anillo}}">{{$g1llo->gallo1_anillo}}</option>
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <select name="participante_id" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:change="listarG1llos($event.target.value)">
+                            <option>--- Seleccionar Equipo ---</option>
+                            @foreach($participantes as $participante)
+                            <option value="{{$participante->id}}">{{$participante->equipo}}</option>
                             @endforeach
-                        @endif
-                    </select>
-                </div>
-            </div>
-
-        </div>
-        <div class="form-group">
-            {{ Form::label('Peleador 2') }}
-            <div class="row g-3">
-                <div class="col">
-                    <select name="equipo2" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:change="listarG1llos($event.target.value)">
-                        <option>--- Seleccionar Equipo ---</option>
-                        @foreach($participantes as $participante)
-                        <option value="{{$participante->equipo}}">{{$participante->equipo}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="col">
-                    <select name="peleador1" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                        <option>--- Seleccionar Anillo ---</option>
-                        @if ($g1llos)
-                            @foreach($g1llos as $g1llo)
-                            <option value="{{$g1llo->gallo1_anillo}}">{{$g1llo->gallo1_anillo}}</option>
+                        </select>
+                        &nbsp;
+                    <img src="{{ asset('argon') }}/img/brand/vs.png" width=180 height=85>
+                        &nbsp;
+                        <select name="clonparticipante_id" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" wire:change="listarG1llos($event.target.value)">
+                            <option>--- Seleccionar Equipo ---</option>
+                            @foreach($clonparticipantes as $clonparticipante)
+                            <option value="{{$clonparticipante->id}}">{{$clonparticipante->equipo}}</option>
                             @endforeach
-                        @endif
-                    </select>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Guardar</button>
+    <div class="card text-center">
+        <div class="box-footer mt20">
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
     </div>
 </div>

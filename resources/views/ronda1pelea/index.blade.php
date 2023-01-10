@@ -66,10 +66,10 @@
                                             
                                             <th>Equipo</th>
                                             <th>Peleador 1</th>
-                                            <th>Peso 1</th>
+                                            <th>Peso</th>
                                             <th>Equipo</th>
                                             <th>Peleador 2</th>
-                                            <th>Peso 2</th>
+                                            <th>Peso</th>
 
                                             <th>DIF Peso</th>
                                             <th>Acciones</th>
@@ -80,14 +80,14 @@
                                             <tr>
                                                 <td>{{ ++$i }}</td>
                                                 
-                                                <td>{{ $ronda1pelea->equipo1 }}</td>
-                                                <td>{{ $ronda1pelea->peleador1 }}</td>
-                                                <td>{{ $ronda1pelea->peso1 }}</td>
-                                                <td>{{ $ronda1pelea->equipo2 }}</td>
-                                                <td>{{ $ronda1pelea->peleador2 }}</td>
-                                                <td>{{ $ronda1pelea->peso2 }}</td>
+                                                <td>{{ $ronda1pelea->participante->equipo }}</td>
+                                                <td>{{ $ronda1pelea->participante->gallo1_anillo }}</td>
+                                                <td>{{ $ronda1pelea->participante->peso1 }}</td>
+                                                <td>{{ $ronda1pelea->clonparticipante->equipo }}</td>
+                                                <td>{{ $ronda1pelea->clonparticipante->gallo1_anillo }}</td>
+                                                <td>{{ $ronda1pelea->clonparticipante->peso1 }}</td>
 
-                                                <td>{{ $ronda1pelea->peso1 - $ronda1pelea->peso2  }}</td>
+                                                <td>{{ $ronda1pelea->participante->peso1 - $ronda1pelea->clonparticipante->peso1  }}</td>
                                                 <td>
                                                     <form action="{{ route('ronda1peleas.destroy',$ronda1pelea->id) }}" method="POST">
                                                         <a class="btn btn-sm btn-primary " href="{{ route('ronda1peleas.show',$ronda1pelea->id) }}"><i class="fa fa-fw fa-eye"></i></a>
