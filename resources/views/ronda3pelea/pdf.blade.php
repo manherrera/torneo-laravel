@@ -15,10 +15,10 @@
             <tr>
                 <th>Equipo</th>
                 <th>Peleador 1</th>
-                <th>Peso 1</th>
+                <th>Peso</th>
                 <th>Equipo</th>
                 <th>Peleador 2</th>
-                <th>Peso 2</th>
+                <th>Peso</th>
 
                 <th>DIF Peso</th>
             </tr>
@@ -27,14 +27,14 @@
             @foreach ($ronda3peleas as $ronda3pelea)
                 <tr>
                     
-                    <td>{{ $ronda3pelea->equipo1 }}</td>
-                    <td>{{ $ronda3pelea->peleador1 }}</td>
-                    <td>{{ $ronda3pelea->peso1 }}</td>
-                    <td>{{ $ronda3pelea->equipo2 }}</td>
-                    <td>{{ $ronda3pelea->peleador2 }}</td>
-                    <td>{{ $ronda3pelea->peso2 }}</td>
+                    <td>{{ $ronda3pelea->participante->equipo }}</td>
+                    <td>{{ $ronda3pelea->participante->gallo3_anillo }}</td>
+                    <td>{{ $ronda3pelea->participante->peso3 }}</td>
+                    <td>{{ $ronda3pelea->clonparticipante->equipo }}</td>
+                    <td>{{ $ronda3pelea->clonparticipante->gallo3_anillo }}</td>
+                    <td>{{ $ronda3pelea->clonparticipante->peso3 }}</td>
 
-                    <td></td>
+                    <td>{{ $ronda3pelea->participante->peso3 - $ronda3pelea->clonparticipante->peso3  }}</td>
                 </tr>
             @endforeach
         </tbody>
