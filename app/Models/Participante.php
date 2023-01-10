@@ -4,34 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Participante
- *
- * @property $id
- * @property $equipo
- * @property $gallo1_anillo
- * @property $peso1
- * @property $puntos1
- * @property $gallo2_anillo
- * @property $peso2
- * @property $puntos2
- * @property $gallo3_anillo
- * @property $peso3
- * @property $puntos3
- * @property $gallo4_anillo
- * @property $peso4
- * @property $puntos4
- * @property $gallo5_anillo
- * @property $peso5
- * @property $puntos5
- * @property $puntaje_total
- * @property $estado
- * @property $created_at
- * @property $updated_at
- *
- * @package App
- * @mixin \Illuminate\Database\Eloquent\Builder
- */
 class Participante extends Model
 {
     

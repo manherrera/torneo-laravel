@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateG5llosTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -21,6 +21,7 @@ class CreateG5llosTable extends Migration
             
             //Datos para Gallo 1
             $table->integer('gallo5_anillo')->nullable();
+            $table->integer('peso5')->nullable();
             //
             $table->foreign('equipo_id')->references('id')->on('participantes')->onDelete('cascade');
             $table->timestamps();
@@ -36,4 +37,4 @@ class CreateG5llosTable extends Migration
     {
         Schema::dropIfExists('g5llos');
     }
-}
+};
