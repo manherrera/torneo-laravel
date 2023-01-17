@@ -39,7 +39,7 @@
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('ronda4pelea.form')
+                            @livewire('gallo4-component')
 
                         </form>
                     </div>

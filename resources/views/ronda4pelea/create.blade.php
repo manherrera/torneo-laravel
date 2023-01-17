@@ -38,7 +38,7 @@
                             <form method="POST" action="{{ route('ronda4peleas.store') }}"  role="form" enctype="multipart/form-data">
                                 @csrf
 
-                                @include('ronda4pelea.form')
+                                @livewire('gallo4-component')
 
                             </form>
                         </div>
