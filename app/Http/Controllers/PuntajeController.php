@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Puntaje;
-use App\Models\Ronda1pelea;
 use Illuminate\Http\Request;
 
 /**
@@ -62,7 +61,7 @@ class PuntajeController extends Controller
     {
         $puntaje = Puntaje::find($id);
 
-        return view('ronda1pelea.show', compact('puntaje'));
+        return view('puntaje.show', compact('puntaje'));
     }
 
     /**
