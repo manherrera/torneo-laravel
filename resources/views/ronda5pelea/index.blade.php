@@ -37,6 +37,10 @@
 
                                 <div class="float-right">
                                     <a href="{{ route('ronda5pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
+                                    <i class="fas fa-bolt"></i>{{ __(' Match') }}
+                                    </a>
+                                &nbsp;
+                                    <a href="{{ route('ronda5pelea.pdf') }}" class="btn btn-primary btn-sm"  data-placement="left">
                                     <i class="fas fa-file-pdf"></i>{{ __(' PDF') }}
                                     </a>
                                 &nbsp;
