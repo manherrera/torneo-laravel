@@ -1,8 +1,9 @@
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_puntaje AFTER INSERT ON participantes FOR EACH ROW
 BEGIN
-    INSERT INTO puntajes (equipo_id, puntos1, puntos2, puntos3, puntos4, puntos5)
+    INSERT INTO puntajes (id, equipo_id, puntos1, puntos2, puntos3, puntos4, puntos5)
     VALUES (NEW.id,
+	    NEW.id,
 	    NEW.puntos1,
 	    NEW.puntos2,
 	    NEW.puntos3,
