@@ -31,82 +31,34 @@ BEGIN
     UPDATE participantes SET puntaje_total= @result WHERE id= NEW.equipo_id;
 END;$$
 
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g1llo AFTER INSERT ON participantes FOR EACH ROW
-BEGIN
-    INSERT INTO g1llos (equipo_id, gallo1_anillo)
-    VALUES (NEW.id,
-	        NEW.gallo1_anillo);
-END;$$
 
 DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g1llo2 AFTER UPDATE ON participantes FOR EACH ROW
+CREATE OR REPLACE TRIGGER tg_clone1 AFTER INSERT ON participantes FOR EACH ROW
 BEGIN
-    UPDATE g1llos
-    SET gallo1_anillo= NEW.gallo1_anillo
-    WHERE equipo_id= NEW.id;
+    INSERT INTO clonparticipantes (id, equipo, gallo1_anillo, peso1, puntos1,
+					   gallo2_anillo, peso2, puntos2,
+					   gallo3_anillo, peso3, puntos3,
+					   gallo4_anillo, peso4, puntos4,
+					   gallo5_anillo, peso5, puntos5)
+					   
+    VALUES (NEW.id ,NEW.equipo,
+	    NEW.gallo1_anillo, NEW.peso1, NEW.puntos1,
+	    NEW.gallo2_anillo, NEW.peso2, NEW.puntos2,
+	    NEW.gallo3_anillo, NEW.peso3, NEW.puntos3,
+	    NEW.gallo4_anillo, NEW.peso4, NEW.puntos4,
+	    NEW.gallo5_anillo, NEW.peso5, NEW.puntos5);
 END;$$
 
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g2llo AFTER INSERT ON participantes FOR EACH ROW
-BEGIN
-    INSERT INTO g2llos (equipo_id, gallo2_anillo)
-    VALUES (NEW.id,
-	        NEW.gallo2_anillo);
-END;$$
 
 DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g2llo2 AFTER UPDATE ON participantes FOR EACH ROW
+CREATE OR REPLACE TRIGGER tg_clone2 AFTER UPDATE ON participantes FOR EACH ROW
 BEGIN
-    UPDATE g2llos
-    SET gallo2_anillo= NEW.gallo2_anillo
-    WHERE equipo_id= NEW.id;
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g3llo AFTER INSERT ON participantes FOR EACH ROW
-BEGIN
-    INSERT INTO g3llos (equipo_id, gallo3_anillo)
-    VALUES (NEW.id,
-	        NEW.gallo3_anillo);
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g3llo2 AFTER UPDATE ON participantes FOR EACH ROW
-BEGIN
-    UPDATE g3llos
-    SET gallo3_anillo= NEW.gallo3_anillo
-    WHERE equipo_id= NEW.id;
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g4llo AFTER INSERT ON participantes FOR EACH ROW
-BEGIN
-    INSERT INTO g4llos (equipo_id, gallo4_anillo)
-    VALUES (NEW.id,
-	        NEW.gallo4_anillo);
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g4llo2 AFTER UPDATE ON participantes FOR EACH ROW
-BEGIN
-    UPDATE g4llos
-    SET gallo4_anillo= NEW.gallo4_anillo
-    WHERE equipo_id= NEW.id;
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g5llo AFTER INSERT ON participantes FOR EACH ROW
-BEGIN
-    INSERT INTO g5llos (equipo_id, gallo5_anillo)
-    VALUES (NEW.id,
-	        NEW.gallo5_anillo);
-END;$$
-
-DELIMITER $$
-CREATE OR REPLACE TRIGGER tg_g5llo2 AFTER UPDATE ON participantes FOR EACH ROW
-BEGIN
-    UPDATE g5llos
-    SET gallo5_anillo= NEW.gallo5_anillo
-    WHERE equipo_id= NEW.id;
+    UPDATE clonparticipantes
+    SET equipo= NEW.equipo, gallo1_anillo= NEW.gallo1_anillo, peso1=NEW.peso1, puntos1=NEW.puntos1,
+			    gallo2_anillo= NEW.gallo2_anillo, peso2=NEW.peso2, puntos2=NEW.puntos2,
+			    gallo3_anillo= NEW.gallo3_anillo, peso3=NEW.peso3, puntos3=NEW.puntos3,
+			    gallo4_anillo= NEW.gallo4_anillo, peso4=NEW.peso4, puntos4=NEW.puntos4,
+			    gallo5_anillo= NEW.gallo5_anillo, peso5=NEW.peso5, puntos5=NEW.puntos5
+			    
+    WHERE id= NEW.id;
 END;$$

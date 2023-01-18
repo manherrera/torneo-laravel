@@ -11,12 +11,17 @@ class Participante extends Model
 		'equipo' => 'required',
 		'gallo1_anillo' => 'required',
 		'peso1' => 'required',
+    'puntos1' => 'required',
 		'gallo2_anillo' => 'required',
 		'peso2' => 'required',
+    'puntos2' => 'required',
 		'gallo3_anillo' => 'required',
 		'peso3' => 'required',
+    'puntos3' => 'required',
 		'gallo4_anillo' => 'required',
 		'peso4' => 'required',
+    'puntos4' => 'required',
+    'puntos5' => 'required',
     ];
 
     protected $perPage = 20;
