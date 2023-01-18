@@ -39,13 +39,31 @@
 
                     <div class="card-body">
                         
-                        <div class="form-group">
-                            <strong>Peleador 1 (Anillo):</strong>
-                            {{ $ronda4pelea->peleador1 }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Peleador 2 (Anillo):</strong>
-                            {{ $ronda4pelea->peleador2 }}
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ $ronda4pelea->participante->equipo }}</h3>
+                                    <p class="card-text">Anillo: {{ $ronda4pelea->participante->gallo4_anillo }}</p>
+                                    <p class="card-text">Peso: {{ $ronda4pelea->participante->peso4 }}</p>
+                                    <p class="card-text">Puntos: {{ $ronda4pelea->participante->puntos4 }}</p>
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Definir</a>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ $ronda4pelea->clonparticipante->equipo }}</h3>
+                                    <p class="card-text">Anillo: {{ $ronda4pelea->clonparticipante->gallo4_anillo }}</p>
+                                    <p class="card-text">Peso: {{ $ronda4pelea->clonparticipante->peso4 }}</p>
+                                    <p class="card-text">Puntos: {{ $ronda4pelea->clonparticipante->puntos4 }}</p>
+                                    <br>
+                                    <a href="#" class="btn btn-primary">Definir</a>
+                                </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

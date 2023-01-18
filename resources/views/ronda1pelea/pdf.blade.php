@@ -35,8 +35,6 @@
                     <td>{{ $ronda1pelea->clonparticipante->peso1 }}</td>
 
                     <td>{{ $ronda1pelea->participante->peso1 - $ronda1pelea->clonparticipante->peso1  }}</td>
-
-                    <td></td>
                 </tr>
             @endforeach
         </tbody>
