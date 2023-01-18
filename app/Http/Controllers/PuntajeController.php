@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Puntaje;
+use App\Models\Ronda1pelea;
 use Illuminate\Http\Request;
 
 /**
@@ -61,7 +62,7 @@ class PuntajeController extends Controller
     {
         $puntaje = Puntaje::find($id);
 
-        return view('puntaje.show', compact('puntaje'));
+        return view('ronda1pelea.show', compact('puntaje'));
     }
 
     /**
@@ -90,8 +91,8 @@ class PuntajeController extends Controller
 
         $puntaje->update($request->all());
 
-        return redirect()->route('puntajes.index')
-            ->with('success', 'Puntaje updated successfully');
+        return redirect()->route('equipos.index')
+            ->with('success', 'Puntos insertados con exito');
     }
 
     /**

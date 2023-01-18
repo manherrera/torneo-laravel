@@ -57,6 +57,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 	//Registro de partcipantes
 	Route::resource('participantes', App\Http\Controllers\ParticipanteController::class)->middleware('auth');
+	Route::resource('puntajes', App\Http\Controllers\PuntajeController::class)->middleware('auth');
 
 	//Clasificaciones
 	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');

@@ -48,7 +48,9 @@
                                     <p class="card-text">Peso: {{ $ronda5pelea->participante->peso5 }}</p>
                                     <p class="card-text">Puntos: {{ $ronda5pelea->participante->puntos5 }}</p>
                                     <br>
-                                    <a href="#" class="btn btn-primary">Definir</a>
+                                    <form action="{{ route('puntajes.destroy',$ronda5pelea->participante_id) }}" method="POST">
+                                        <a class="btn btn-sm btn-success" href="{{ route('puntajes.edit',$ronda5pelea->participante_id) }}"><i class="fa fa-fw fa-edit"></i> Definir</a>
+                                    </form>
                                 </div>
                                 </div>
                             </div>
@@ -60,7 +62,9 @@
                                     <p class="card-text">Peso: {{ $ronda5pelea->clonparticipante->peso5 }}</p>
                                     <p class="card-text">Puntos: {{ $ronda5pelea->clonparticipante->puntos5 }}</p>
                                     <br>
-                                    <a href="#" class="btn btn-primary">Definir</a>
+                                    <form action="{{ route('puntajes.destroy',$ronda5pelea->clonparticipante_id) }}" method="POST">
+                                        <a class="btn btn-sm btn-success" href="{{ route('puntajes.edit',$ronda5pelea->clonparticipante_id) }}"><i class="fa fa-fw fa-edit"></i> Definir</a>
+                                    </form>
                                 </div>
                                 </div>
                             </div>
