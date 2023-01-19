@@ -25,7 +25,6 @@ class Puntaje extends Model
 {
     
     static $rules = [
-		'equipo_id' => 'required',
     ];
 
     protected $perPage = 20;

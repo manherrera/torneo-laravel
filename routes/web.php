@@ -58,6 +58,10 @@ Route::group(['middleware' => 'auth'], function () {
 	//Registro de partcipantes
 	Route::resource('participantes', App\Http\Controllers\ParticipanteController::class)->middleware('auth');
 	Route::resource('puntajes', App\Http\Controllers\PuntajeController::class)->middleware('auth');
+	Route::resource('p2ntajes', App\Http\Controllers\P2ntajeController::class)->middleware('auth');
+	Route::resource('p3ntajes', App\Http\Controllers\P3ntajeController::class)->middleware('auth');
+	Route::resource('p4ntajes', App\Http\Controllers\P4ntajeController::class)->middleware('auth');
+	Route::resource('p5ntajes', App\Http\Controllers\P5ntajeController::class)->middleware('auth');	
 
 	//Clasificaciones
 	Route::resource('equipos', App\Http\Controllers\EquipoController::class)->middleware('auth');
