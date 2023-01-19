@@ -63,3 +63,11 @@ BEGIN
 			    
     WHERE id= NEW.id;
 END;$$
+
+
+DELIMITER $$
+CREATE OR REPLACE TRIGGER tg_deleteclone AFTER DELETE ON participantes FOR EACH ROW
+BEGIN
+	DELETE FROM clonparticipantes
+	WHERE id = OLD.id;
+END;$$
