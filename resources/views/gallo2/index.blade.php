@@ -57,6 +57,7 @@
                                         <tr>
 
                                             <th>No</th>
+                                            <th>Partido</th>
                                             <th>No Anillo</th>
                                             <th>Peso</th>
                                             <th>Puntos</th>
@@ -68,6 +69,7 @@
                                             <tr>
 
                                                 <td>{{ ++$i }}</td>
+                                                <td>{{ $g2llo->partido }}</td>
                                                 <td>{{ $g2llo->gallo2_anillo }}</td>
                                                 <td>{{ $g2llo->peso2 }}</td>
                                                 <td>{{ $g2llo->puntos2 }}</td>

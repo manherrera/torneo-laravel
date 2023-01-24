@@ -15,6 +15,7 @@
             <tr>
                 
                 <th>No Anillo</th>
+                <th>Partido</th>
                 <th>Peso</th>
                 <th>Puntos</th>
 
@@ -25,6 +26,7 @@
                 <tr>
 
                     <td>{{ $g3llo->gallo3_anillo }}</td>
+                    <td>{{ $g3llo->partido }}</td>
                     <td>{{ $g3llo->peso3 }}</td>
                     <td>{{ $g3llo->puntos3 }}</td>
 
