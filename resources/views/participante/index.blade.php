@@ -70,6 +70,8 @@
                                             
                                             <th>Equipo</th>
 
+                                            <th>Partido</th>
+
                                             <th>Gallo 1</th>
                                             <th>Peso </th>
 
@@ -94,6 +96,7 @@
                                                 <td>{{ ++$i }}</td>
                                                 
                                                 <td>{{ $participante->equipo }}</td>
+                                                <td>{{ $participante->partido }}</td>
                                                 <td>{{ $participante->gallo1_anillo }}</td>
                                                 <td>{{ $participante->peso1 }}</td>
 

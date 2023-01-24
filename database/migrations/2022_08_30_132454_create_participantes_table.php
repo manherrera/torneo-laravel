@@ -18,6 +18,7 @@ return new class extends Migration
             //Datos Generales
             $table->bigIncrements('id');
             $table->string('equipo');
+            $table->string('partido');
             
             //Datos para Gallo 1
             $table->integer('gallo1_anillo')->unsigned();

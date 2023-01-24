@@ -21,6 +21,7 @@ class ParticipanteController extends Controller
     {
         $busqueda = $request->busqueda;
         $participantes = Participante::where('equipo','LIKE','%'.$busqueda.'%')
+                          ->orWhere('partido','LIKE','%'.$busqueda.'%')
                           ->orWhere('gallo1_anillo','LIKE','%'.$busqueda.'%')
                           ->orWhere('gallo2_anillo','LIKE','%'.$busqueda.'%')
                           ->orWhere('gallo3_anillo','LIKE','%'.$busqueda.'%')

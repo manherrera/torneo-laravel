@@ -36,6 +36,10 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::count();
+
+        $verde = Participante::count()/2;
+        $rojo = Participante::count()/2;
+
         $participante = Participante::count();
         $role = Role::count();
         $total = Ronda1pelea::count()+Ronda2pelea::count()+Ronda3pelea::count()
@@ -52,6 +56,8 @@ class HomeController extends Controller
         return view('dashboard', compact('participantes', 'g1llos', 'g2llos', 'g3llos', 'g4llos', 'g5llos'), [
             'user' => $user,
             'role' => $role,
+            'verde' => $verde,
+            'rojo' => $rojo,
             'participante' => $participante,
             'total' => $total
 

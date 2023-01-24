@@ -2,9 +2,26 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('equipo') }}
-            {{ Form::text('equipo', $participante->equipo, ['class' => 'form-control' . ($errors->has('equipo') ? ' is-invalid' : ''), 'placeholder' => 'Equipo']) }}
-            {!! $errors->first('equipo', '<div class="invalid-feedback">:message</div>') !!}
+            {{ Form::label('Equipo') }}
+            <div class="row g-3">
+                <div class="col">
+                    {{ Form::text('equipo', $participante->equipo, ['class' => 'form-control' . ($errors->has('equipo') ? ' is-invalid' : ''), 'placeholder' => 'Equipo']) }}
+                    {!! $errors->first('equipo', '<div class="invalid-feedback">:message</div>') !!}
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="partido" id="partido" value="verde">
+                            <label class="form-check-label" for="partido">Verde</label>
+                        </div>
+                        <br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="partido" id="partido" value="rojo">
+                            <label class="form-check-label" for="partido">Rojo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             {{ Form::label('Datos del Gallo 1: ') }}

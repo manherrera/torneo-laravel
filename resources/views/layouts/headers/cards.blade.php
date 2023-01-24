@@ -54,7 +54,7 @@
                                     <span class="h2 font-weight-bold mb-0">{{$user}}</span>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                    <div class="icon icon-shape bg-green text-white rounded-circle shadow">
                                         <i class="ni ni-circle-08"></i>
                                     </div>
                                 </div>

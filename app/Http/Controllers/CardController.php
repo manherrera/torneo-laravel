@@ -35,15 +35,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = User::count();
+        $verde = 10;
+        $rojo = 10;
         $participante = Participante::count();
-        $role = Role::count();
         $total = Ronda1pelea::count()+Ronda2pelea::count()+Ronda3pelea::count()
                 +Ronda4pelea::count()+Ronda5pelea::count();
 
 
         return view('layouts.headers.cards', compact(), [
-            'user' => $user,
+            'verde' => $verde,
             'role' => $role,
             'participante' => $participante,
             'total' => $total

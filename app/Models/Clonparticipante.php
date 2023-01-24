@@ -38,6 +38,7 @@ class Clonparticipante extends Model
     
     static $rules = [
 		'equipo' => 'required',
+    'partido' => 'required',
 		'gallo1_anillo' => 'required',
 		'peso1' => 'required',
 		'puntos1' => 'required',
@@ -60,7 +61,7 @@ class Clonparticipante extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo','gallo1_anillo','peso1','puntos1','gallo2_anillo','peso2','puntos2','gallo3_anillo','peso3','puntos3','gallo4_anillo','peso4','puntos4','gallo5_anillo','peso5','puntos5'];
+    protected $fillable = ['equipo','partido','gallo1_anillo','peso1','puntos1','gallo2_anillo','peso2','puntos2','gallo3_anillo','peso3','puntos3','gallo4_anillo','peso4','puntos4','gallo5_anillo','peso5','puntos5'];
 
     
     /**

@@ -35,7 +35,7 @@ class Ronda4pelea extends Model
      *
      * @var array
      */
-    protected $fillable = ['equipo1','participante_id','peso1','equipo2','clonparticipante_id','peso2'];
+    protected $fillable = ['participante_id','clonparticipante_id'];
 
 
     /**
