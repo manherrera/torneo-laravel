@@ -36,13 +36,13 @@ END;$$
 DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_clone1 AFTER INSERT ON participantes FOR EACH ROW
 BEGIN
-    INSERT INTO clonparticipantes (id, equipo, gallo1_anillo, peso1, puntos1,
+    INSERT INTO clonparticipantes (id, equipo, partido, gallo1_anillo, peso1, puntos1,
 					   gallo2_anillo, peso2, puntos2,
 					   gallo3_anillo, peso3, puntos3,
 					   gallo4_anillo, peso4, puntos4,
 					   gallo5_anillo, peso5, puntos5)
 					   
-    VALUES (NEW.id ,NEW.equipo,
+    VALUES (NEW.id ,NEW.equipo, NEW.partido,
 	    NEW.gallo1_anillo, NEW.peso1, NEW.puntos1,
 	    NEW.gallo2_anillo, NEW.peso2, NEW.puntos2,
 	    NEW.gallo3_anillo, NEW.peso3, NEW.puntos3,
@@ -55,7 +55,8 @@ DELIMITER $$
 CREATE OR REPLACE TRIGGER tg_clone2 AFTER UPDATE ON participantes FOR EACH ROW
 BEGIN
     UPDATE clonparticipantes
-    SET equipo= NEW.equipo, gallo1_anillo= NEW.gallo1_anillo, peso1=NEW.peso1, puntos1=NEW.puntos1,
+    SET equipo= NEW.equipo, partido= NEW.partido,
+			    gallo1_anillo= NEW.gallo1_anillo, peso1=NEW.peso1, puntos1=NEW.puntos1,
 			    gallo2_anillo= NEW.gallo2_anillo, peso2=NEW.peso2, puntos2=NEW.puntos2,
 			    gallo3_anillo= NEW.gallo3_anillo, peso3=NEW.peso3, puntos3=NEW.puntos3,
 			    gallo4_anillo= NEW.gallo4_anillo, peso4=NEW.peso4, puntos4=NEW.puntos4,
