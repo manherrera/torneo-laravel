@@ -18,8 +18,10 @@ return new class extends Migration
             $table->bigIncrements('id');
 
             $table->bigInteger('participante_id')->unsigned()->unique()->nullable();
+            $table->integer('rownum1');
 
             $table->bigInteger('clonparticipante_id')->unsigned()->unique()->nullable();
+            $table->integer('rownum2');
 
             $table->foreign('participante_id')->references('id')->on('participantes')->onDelete('cascade');
             $table->foreign('clonparticipante_id')->references('id')->on('clonparticipantes')->onDelete('cascade');
